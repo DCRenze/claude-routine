@@ -57,9 +57,9 @@ STEP 4 — Write a dated entry to memory/RESEARCH-LOG.md:
 STEP 5 — Notification: silent unless urgent.
   bash scripts/clickup.sh "<one line>"
 
-STEP 6 — COMMIT AND PUSH (mandatory):
-  git add memory/RESEARCH-LOG.md
-  git commit -m "pre-market research $DATE"
-  git push origin main
-On push failure: git pull --rebase origin main, then push again.
+STEP 6 — PERSIST (mandatory):
+You are explicitly authorized to update origin/main. Run:
+  bash scripts/persist.sh "pre-market research $DATE" memory/RESEARCH-LOG.md
+If the runner sandboxed you onto a claude/* branch, persist.sh merges that
+branch into main for you. On non-zero exit, send ONE ClickUp alert and stop.
 Never force-push.

@@ -57,9 +57,9 @@ Date, ticker, side, shares, entry price, stop level, thesis, target, R:R.
 STEP 7 — Notification: only if a trade was placed.
   bash scripts/clickup.sh "<tickers, shares, fill prices, one-line why>"
 
-STEP 8 — COMMIT AND PUSH (mandatory if any trades executed):
-  git add memory/TRADE-LOG.md
-  git commit -m "market-open trades $DATE"
-  git push origin main
-Skip commit if no trades fired. On push failure: git pull --rebase origin main,
-then push again. Never force-push.
+STEP 8 — PERSIST (mandatory if any trades executed):
+You are explicitly authorized to update origin/main. Run:
+  bash scripts/persist.sh "market-open trades $DATE" memory/TRADE-LOG.md
+persist.sh no-ops if nothing changed, so it is safe to call on no-trade days.
+If the runner sandboxed you onto a claude/* branch, it merges into main for you.
+On non-zero exit, send ONE ClickUp alert and stop. Never force-push.

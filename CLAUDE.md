@@ -37,7 +37,9 @@ runs per trading day plus two ad-hoc helpers.
 ## API Wrappers
 
 Use bash scripts/alpaca.sh, scripts/perplexity.sh, scripts/clickup.sh.
-Never curl these APIs directly.
+Never curl these APIs directly. To persist memory changes in cloud routines,
+use bash scripts/persist.sh "<msg>" <files...> — it commits and lands the
+changes on main even when the runner sandboxes you onto a claude/* branch.
 
 ## Communication Style
 

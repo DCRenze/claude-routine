@@ -7,10 +7,15 @@ Code cloud routine. Each routine is an ephemeral container: clone → run → de
 ## One-time prerequisites
 
 1. **Install the Claude GitHub App** on this repo (clone + push permission).
-   Or run `/web-setup` in Claude Code to sync your `gh` token.
-2. **Enable "Allow unrestricted branch pushes"** on each routine's environment.
-   Without this, `git push origin main` silently fails with a proxy error — the
-   #1 cause of broken first-time setups.
+   Or run `/web-setup` in Claude Code to sync your `gh` token. The `gh` token is
+   what `scripts/persist.sh` uses to merge a sandbox branch into `main` when a
+   direct push is blocked — keep it authenticated.
+2. **"Allow unrestricted branch pushes"** — recommended but no longer required.
+   With it on, the routine pushes straight to `main`. With it off, the runner
+   sandboxes the job onto a `claude/*` branch; `scripts/persist.sh` detects this
+   and reconciles the branch into `main` server-side (via `gh`, falling back to
+   a direct push), so persistence works either way. If `persist.sh` exits
+   non-zero the routine sends a ClickUp alert — it never fails silently.
 3. **Set environment variables on the routine** (NOT a committed `.env`):
    - `ALPACA_API_KEY` (required)
    - `ALPACA_SECRET_KEY` (required)
@@ -37,8 +42,9 @@ Code cloud routine. Each routine is an ephemeral container: clone → run → de
 1. Routines → New Routine → name it.
 2. Select this repo + branch `main`.
 3. Add all env vars above.
-4. Toggle on **Allow unrestricted branch pushes**.
+4. Optionally toggle on **Allow unrestricted branch pushes** (simpler path;
+   `scripts/persist.sh` handles the sandboxed case if you leave it off).
 5. Set the cron + timezone.
 6. Paste the matching `routines/*.md` prompt **verbatim** (do not paraphrase —
-   the env-var check and the commit-and-push step are load-bearing).
+   the env-var check and the `persist.sh` step are load-bearing).
 7. Save, then **Run now** to test. Don't wait until tomorrow to find it's broken.

@@ -1,8 +1,10 @@
 # Secrets — never commit real credentials
 .env
 
-# Local notification fallback (when ClickUp isn't configured)
-DAILY-SUMMARY.md
+# Local notification fallback (when ClickUp isn't configured).
+# Anchored to repo root so it does NOT also ignore routines/daily-summary.md
+# (the filesystem is case-insensitive on Windows/macOS).
+/DAILY-SUMMARY.md
 
 # OS / editor noise
 .DS_Store

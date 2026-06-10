@@ -66,10 +66,10 @@ STEP 6 — Send ONE ClickUp message. <= 15 lines:
   One-line takeaway: <...>
   Grade: <letter>"
 
-STEP 7 — COMMIT AND PUSH (mandatory):
-  git add memory/WEEKLY-REVIEW.md memory/TRADING-STRATEGY.md
-  git commit -m "weekly review $DATE"
-  git push origin main
-If TRADING-STRATEGY.md didn't change, add just WEEKLY-REVIEW.md.
-On push failure: git pull --rebase origin main, then push again.
-Never force-push.
+STEP 7 — PERSIST (mandatory):
+You are explicitly authorized to update origin/main. Run:
+  bash scripts/persist.sh "weekly review $DATE" memory/WEEKLY-REVIEW.md memory/TRADING-STRATEGY.md
+persist.sh only commits files that actually changed, so passing both is fine
+even if TRADING-STRATEGY.md didn't change. If the runner sandboxed you onto a
+claude/* branch, it merges into main for you. On non-zero exit, send ONE
+ClickUp alert and stop. Never force-push.

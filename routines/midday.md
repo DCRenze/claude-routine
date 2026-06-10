@@ -52,9 +52,9 @@ sharply with no obvious cause. Append afternoon addendum to RESEARCH-LOG.
 STEP 7 — Notification: only if action was taken.
   bash scripts/clickup.sh "<action summary>"
 
-STEP 8 — COMMIT AND PUSH (if any memory files changed):
-  git add memory/TRADE-LOG.md memory/RESEARCH-LOG.md
-  git commit -m "midday scan $DATE"
-  git push origin main
-Skip commit if no-op. On push failure: git pull --rebase origin main,
-then push again. Never force-push.
+STEP 8 — PERSIST (if any memory files changed):
+You are explicitly authorized to update origin/main. Run:
+  bash scripts/persist.sh "midday scan $DATE" memory/TRADE-LOG.md memory/RESEARCH-LOG.md
+persist.sh no-ops if nothing changed. If the runner sandboxed you onto a
+claude/* branch, it merges into main for you. On non-zero exit, send ONE
+ClickUp alert and stop. Never force-push.
