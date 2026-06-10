@@ -61,3 +61,10 @@ TRADE or HOLD (default HOLD if no edge)
 
 ### Decision
 HOLD. No positions; do not initiate ahead of CPI with VIX ~20 and rotation underway. Re-assess at market-open run post-CPI; energy/industrials/staples are the watchlist if data is benign. Patience > activity.
+
+### Market-Open Update (post-CPI)
+- Tape risk-off, NOT benign: S&P ~7,300 (-1.17%), Nasdaq ~-1.5%, 10Y ~4.54% (elevated), tech-led selloff. Added shock: US–Iran strikes testing ceasefire.
+- Watchlist precondition ("if data benign") FAILED → no XLI/XLP build.
+- XLE entry undercut by sliding oil; geopolitical oil bid is two-sided, not a clean momentum setup.
+- Quotes: XLE 57.99, XLI 173.72, XLP 84.59, SPY 733.34.
+- Decision: HOLD. 100% cash, 0 positions. No trades. Patience > activity.
