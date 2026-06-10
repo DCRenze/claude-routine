@@ -1,0 +1,7 @@
+# Shell scripts MUST keep LF endings — they run in Linux cloud containers.
+# CRLF would break bash with "\r: command not found" / bad interpreter errors.
+*.sh text eol=lf
+
+# Routine/command prompts contain bash snippets executed in the cloud — keep LF.
+routines/*.md text eol=lf
+.claude/commands/*.md text eol=lf

@@ -1,0 +1,9 @@
+# Secrets — never commit real credentials
+.env
+
+# Local notification fallback (when ClickUp isn't configured)
+DAILY-SUMMARY.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
