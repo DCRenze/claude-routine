@@ -30,3 +30,6 @@ Format each entry:
 
 ### Decision
 TRADE or HOLD (default HOLD if no edge)
+
+## 2026-06-09 — Persistence self-test
+Round-trip verified: routine can update memory and push to main.
