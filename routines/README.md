@@ -22,15 +22,15 @@ Code cloud routine. Each routine is an ephemeral container: clone → run → de
    - `CLICKUP_WORKSPACE_ID` (required; numeric)
    - `CLICKUP_CHANNEL_ID` (required; format `4-XXXXXXX-X`)
 
-## The five schedules (America/Chicago)
+## The five schedules (America/Los_Angeles — Pacific)
 
 | Routine        | Cron            |
 |----------------|-----------------|
-| pre-market     | `0 6 * * 1-5`   |
-| market-open    | `30 8 * * 1-5`  |
-| midday         | `0 12 * * 1-5`  |
-| daily-summary  | `0 15 * * 1-5`  |
-| weekly-review  | `0 16 * * 5`    |
+| pre-market     | `0 4 * * 1-5`   |
+| market-open    | `30 6 * * 1-5`  |
+| midday         | `0 10 * * 1-5`  |
+| daily-summary  | `0 13 * * 1-5`  |
+| weekly-review  | `0 14 * * 5`    |
 
 ## Creating a routine
 
