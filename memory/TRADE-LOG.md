@@ -27,3 +27,12 @@ Notes: Account funded and active as of today, but Alpaca equity is $100,000.00 v
 | XLE | 300 | $58.57 | $57.11 | -1.96% | -$438 (-2.49%) | $52.97 trail 10% GTC (hwm $58.86) |
 
 Notes: Day 2. Opened first position — 300 sh XLE @ $58.57 on the post-PPI defensive-rotation thesis, 10% trailing stop live as GTC [3e8a4aca]. XLE faded into the close (-1.96% on the day), leaving the position at -2.49% unrealized / -$438, which is the entirety of today's portfolio drawdown. Still well inside risk limits: -2.49% vs -7% manual-cut line and far above the $52.97 trailing stop. Deployed only ~17% (1/6 positions, 1/3 weekly trades used) — below the 75-85% target, so capital remains for adds as thesis develops. No stops triggered, no other trades. PDT count: 0.
+
+## Jun 12 — EOD Snapshot (Day 3, Friday)
+**Portfolio:** $99,678.99 | **Cash:** $82,428.99 (82.7%) | **Day P&L:** +$116.99 (+0.12%) | **Phase P&L:** -$321.01 (-0.32%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| XLE | 300 | $58.57 | $57.50 | +0.67% | -$321 (-1.83%) | $52.97 trail 10% GTC (hwm $58.86) |
+
+Notes: Day 3. No trades today — held the single XLE position. XLE recovered modestly (+0.67%), trimming unrealized loss to -$321 / -1.83% from yesterday's -2.49%, and lifting the portfolio +$116.99 (+0.12%) on the day. Phase P&L now -0.32%, essentially the XLE unrealized mark. Position well inside limits: -1.83% vs -7% cut line, far above $52.97 trailing stop (10% GTC live [3e8a4aca], hwm $58.86). Deployed ~17.3% (1/6 positions), below the 75-85% target — dry powder remains. Weekly trade count 1/3, week closes Friday. PDT count: 0. Next week: monitor energy/oil thesis on XLE; scout adds to lift deployment toward target if pre-market research confirms momentum.
