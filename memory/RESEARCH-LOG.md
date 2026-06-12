@@ -99,3 +99,35 @@ HOLD. No positions; do not initiate ahead of CPI with VIX ~20 and rotation under
 
 ### Decision
 HOLD. 100% cash, 0 positions. No initiation ahead of PPI with VIX ~20.8 and hot-CPI overhang. Re-assess at market-open run post-PPI; XLE is the lead watch (oil firmed, sector leadership intact), XLI/XLP secondary if data benign. Patience > activity.
+
+## 2026-06-12 — Pre-market Research
+
+### Account
+- Equity: $99,465.99
+- Cash: $82,428.99 (82.9%)
+- Buying power: $377,419.56 (4x)
+- Daytrade count: 0
+- Open: XLE 300 sh @ $58.57 | cur $56.79 | -$534 (-3.04%) | trail 10% GTC stop $52.97 (hwm $58.855) [3e8a4aca]
+- Note: Alpaca equity ~$99.5k vs $10k baseline (10x mismatch, flagged Day 1). Still treating $100k as working baseline.
+
+### Market Context
+- WTI / Brent: ~$84.85 / ~$87 — oil DROPPED ~4% on the day (was ~$92 on 6/11). Direct headwind to held XLE.
+- S&P futures: ESM ~7,397–7,412, ~+0.2% premarket. Thursday 6/11 was a sharp relief rally — ES +1.73%, NQ +3.26%, tech-led (post-PPI digestion).
+- VIX: ~19.4 — easing off the low-20s, tape calming.
+- Today's macro: UMich Consumer Sentiment (Prelim, June) 10:00am ET, consensus ~44.8–46 (watch inflation-expectations sub-print). No other major release. FOMC 6/16–17 next week.
+- Catalysts: AI/data-center theme strong; Oracle + Adobe (ADBE reported after close 6/11) driving software/tech. SpaceX IPO buzz.
+- Sector momentum (YTD): LEADING — Energy (~+26–35%, still #1), Tech (+18% 6mo), Industrials, Materials. LAGGING — Health Care, Financials. Note: Thursday's leadership flipped tech-ward (rotation reversing vs energy/defensive).
+
+### Trade Ideas
+1. XLE — HOLD existing, do NOT add. Thesis under pressure: oil -4% + rotation reversing toward tech undercut both legs of the defensive-energy entry. Still above -7% manual-cut ($54.47) and far above $52.97 trail. Catalyst to re-engage: reclaim $58 on oil stabilizing. Manual cut $54.47.
+2. Tech/AI (XLK / semis) — Thursday leadership flip (NQ +3.26%), AI demand + Oracle/Adobe momentum. WATCH only — chasing a +3% day into FOMC 6/17 is a poor entry. Would need a pullback. No fresh capital pre-FOMC.
+3. No single-name conviction. Don't initiate into FOMC week with rotation unstable.
+
+### Risk Factors
+- Oil -4% directly pressures held XLE position.
+- Rotation flipping tech-ward weakens the energy/defensive thesis that drove the XLE entry.
+- FOMC 6/16–17 next week + hot CPI (6/10) keep hawkish tail risk live — do NOT deploy fresh into the event.
+- UMich sentiment 10am ET — inflation-expectations sub-print can move the tape.
+
+### Decision
+HOLD. Keep XLE with 10% trail live as GTC; do NOT add, do NOT initiate new positions. Watch XLE vs $54.47 manual-cut line into the open. Deployed ~17% (1/6 positions, 1/3 weekly trades used). Patience > activity.
