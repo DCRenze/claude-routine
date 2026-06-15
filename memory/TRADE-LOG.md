@@ -44,3 +44,11 @@ Notes: Day 3. No trades today — held the single XLE position. XLE recovered mo
 **Protection restored:** Re-placed protective stop — fixed stop $52.97 GTC [ee73ba2c] at the prior trail level (a fresh 10% trailing stop reset its hwm to $55.12 → floor $49.61, which would move the stop DOWN, so used fixed $52.97 to honor never-move-down). Position protected, NOT naked.
 **State:** XLE 300 sh @ $58.57, cur ~$55.14, -5.8%. 1/6 positions, 0/3 weekly trades used. daytrade_count 0.
 **Next:** Retry full exit at midday run once fills are processing. Alerted user via ClickUp.
+
+## Jun 15 — Midday EXIT FILLED (Day 4, Monday) — XLE CLOSED
+**SELL XLE** — 300 sh @ $55.90 exit (market sell-to-close [2c4fbc4d], filled 17:05 UTC) | proceeds $16,770
+- Entry $58.57 → exit $55.90 = **realized -$801.00 (-4.56%)**
+- Reason: thesis broken (not a -7% cut). Morning RESEARCH-LOG killed the XLE thesis on both legs — WTI ~$80 (-20% on Iran de-escalation) and rotation reversed tech-ward, XLE below 50-DMA. Do not defend a dead thesis into FOMC 6/17.
+- Execution: morning market-sell attempts sat unfilled (paper engine). Midday retry — canceled protective stop [ee73ba2c] (204), submitted market sell to close, FILLED in <1s @ $55.90.
+- State after: 0/6 positions, 100% cash. Account $99,198.99. Weekly trades 0/3 (exit doesn't count as new trade). daytrade_count 0 (entry 6/11, exit 6/15 — not a day trade). No open orders, no naked exposure.
+- Next: redeploy per pre-market research; energy thesis dead, stay patient into FOMC 6/17.
