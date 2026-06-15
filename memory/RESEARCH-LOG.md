@@ -131,3 +131,35 @@ HOLD. 100% cash, 0 positions. No initiation ahead of PPI with VIX ~20.8 and hot-
 
 ### Decision
 HOLD. Keep XLE with 10% trail live as GTC; do NOT add, do NOT initiate new positions. Watch XLE vs $54.47 manual-cut line into the open. Deployed ~17% (1/6 positions, 1/3 weekly trades used). Patience > activity.
+
+## 2026-06-15 — Pre-market Research
+
+### Account
+- Equity: $99,279.99
+- Cash: $82,428.99 (83.0%)
+- Buying power: $376,898.76 (4x)
+- Daytrade count: 0
+- Open: XLE 300 sh @ $58.57 | cur $56.17 | -$720 (-4.10%) | trail 10% GTC stop $52.97 (hwm $58.855) [3e8a4aca]
+- Note: Alpaca equity ~$99.3k vs $10k baseline (10x mismatch, flagged Day 1). Still treating $100k as working baseline.
+
+### Market Context
+- WTI / Brent: ~$80 WTI — oil DOWN 20%+ from early-June peaks (>$100) on US-Iran agreement reports cutting the conflict-risk premium. Slide is relentless: ~$92 (6/11) → ~$85 (6/12) → ~$80 now. Direct, escalating headwind to held XLE.
+- S&P futures: ES ~7,525, +1.2% premarket — Thu/Fri relief rally extending, tech-led. Risk-on tape.
+- VIX: ~19.4 — calm, off the early-June low-20s.
+- Today's macro: Mon 6/15 NO major US release. Week is FOMC-centric: housing starts 6/16, **retail sales + FOMC decision 6/17 (the binary)**, jobless claims/Philly Fed 6/18, **Fri 6/19 Juneteenth — market CLOSED**.
+- Catalysts: AI infra / data-center demand (DELL $51B backlog), memory shortage (SNDK), rotation into cyclicals. CPI (6/10) + PPI (6/11) already printed.
+- Sector momentum (YTD): LEADING — Energy (still #1 YTD ~+21%), Staples, Industrials. But Energy momentum NOW ROLLING OVER: XLE broke below 50-DMA on 6/11 = trend flip to down. LAGGING — Financials, Health Care.
+
+### Trade Ideas
+1. XLE — HOLD, do NOT add. **Thesis broken on both legs:** oil -20% (Iran de-escalation) AND rotation reversed tech-ward; XLE now below 50-DMA (downtrend per Tickeron). EIA/JPM see Brent easing to $80s/$60s as supply normalizes. Position -4.10%, above -7% manual cut ($54.47) and trail stop $52.97. Action: trim/exit on any weakness at market-open run; do NOT defend a dead thesis into FOMC.
+2. No new initiations — FOMC decision Wed 6/17 is binary; do NOT deploy fresh capital pre-print. Tech/AI strong but chasing a +1.2% gap into FOMC is a poor entry.
+3. Watchlist post-FOMC (if dovish + tape holds): AI infra (DELL, semis), Industrials/Staples continuation. No conviction single-name today.
+
+### Risk Factors
+- Oil -20% directly erodes XLE; energy leadership rolling over (below 50-DMA).
+- FOMC 6/17 + retail sales same morning = binary event risk; hot CPI (6/10) keeps hawkish tail live. No fresh capital into it.
+- Fri 6/19 Juneteenth — market closed; shortened week, thin liquidity Thu PM.
+- Premarket +1.2% gap is extended; chasing risks a fade.
+
+### Decision
+HOLD. Keep XLE 10% trail live as GTC; do NOT add. XLE thesis is broken (oil -20%, below 50-DMA) — flag market-open run to trim/exit on weakness vs $54.47 manual-cut line; do not defend into FOMC. NO new positions into FOMC week. Deployed ~17% (1/6 positions, 0/3 weekly trades used this week). Patience > activity.
