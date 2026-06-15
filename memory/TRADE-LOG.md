@@ -52,3 +52,10 @@ Notes: Day 3. No trades today — held the single XLE position. XLE recovered mo
 - Execution: morning market-sell attempts sat unfilled (paper engine). Midday retry — canceled protective stop [ee73ba2c] (204), submitted market sell to close, FILLED in <1s @ $55.90.
 - State after: 0/6 positions, 100% cash. Account $99,198.99. Weekly trades 0/3 (exit doesn't count as new trade). daytrade_count 0 (entry 6/11, exit 6/15 — not a day trade). No open orders, no naked exposure.
 - Next: redeploy per pre-market research; energy thesis dead, stay patient into FOMC 6/17.
+
+## Jun 15 — EOD Snapshot (Day 4, Monday)
+**Portfolio:** $99,198.99 | **Cash:** $99,198.99 (100%) | **Day P&L:** -$480.00 (-0.48%) | **Phase P&L:** -$801.01 (-0.80%)
+
+No open positions. 100% cash.
+
+Notes: Day 4. Closed the lone XLE position today at midday — sold 300 sh @ $55.90 for a realized -$801.00 (-4.56%) after the morning RESEARCH-LOG killed the thesis on both legs (WTI ~$80, -20% on Iran de-escalation; rotation reversed tech-ward, XLE below 50-DMA). Not a -7% stop-out — a disciplined thesis-broken exit ahead of FOMC 6/17. Morning market-sell attempts sat unfilled in the paper engine and a protective fixed stop $52.97 GTC was held in the interim; midday retry filled in <1s. Day P&L -$480 / -0.48%; Phase P&L now -$801 / -0.80%, essentially the realized XLE loss since the book is flat. Account $99,198.99, 100% cash, 0/6 positions, no open orders, no naked exposure. Weekly new-trade count 0/3 (exit doesn't count). daytrade_count 0 (entry 6/11, exit 6/15 — not a day trade). PDT false. Next: redeploy per pre-market research; energy thesis dead, stay patient into FOMC 6/17.
