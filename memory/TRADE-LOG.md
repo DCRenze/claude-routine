@@ -36,3 +36,11 @@ Notes: Day 2. Opened first position — 300 sh XLE @ $58.57 on the post-PPI defe
 | XLE | 300 | $58.57 | $57.50 | +0.67% | -$321 (-1.83%) | $52.97 trail 10% GTC (hwm $58.86) |
 
 Notes: Day 3. No trades today — held the single XLE position. XLE recovered modestly (+0.67%), trimming unrealized loss to -$321 / -1.83% from yesterday's -2.49%, and lifting the portfolio +$116.99 (+0.12%) on the day. Phase P&L now -0.32%, essentially the XLE unrealized mark. Position well inside limits: -1.83% vs -7% cut line, far above $52.97 trailing stop (10% GTC live [3e8a4aca], hwm $58.86). Deployed ~17.3% (1/6 positions), below the 75-85% target — dry powder remains. Weekly trade count 1/3, week closes Friday. PDT count: 0. Next week: monitor energy/oil thesis on XLE; scout adds to lift deployment toward target if pre-market research confirms momentum.
+
+## Jun 15 — Market-Open (Day 4, Monday) — XLE EXIT ATTEMPT FAILED (broker)
+**Plan:** Exit XLE per today's RESEARCH-LOG — thesis broken on both legs (WTI ~$80, -20% on Iran de-escalation; rotation reversed tech-ward; XLE below 50-DMA). Position -5.8% unrealized. Do not defend a dead thesis into FOMC 6/17.
+**Action attempted:** Canceled 10% trailing stop [3e8a4aca], submitted market sell 300 XLE to close.
+**Outcome: NOT FILLED.** Market sell sat in `new` >2 min with zero fill during regular hours (liquid ETF) — Alpaca paper fill engine not executing. Resubmitted [35b35373] — same, no fill. Canceled both.
+**Protection restored:** Re-placed protective stop — fixed stop $52.97 GTC [ee73ba2c] at the prior trail level (a fresh 10% trailing stop reset its hwm to $55.12 → floor $49.61, which would move the stop DOWN, so used fixed $52.97 to honor never-move-down). Position protected, NOT naked.
+**State:** XLE 300 sh @ $58.57, cur ~$55.14, -5.8%. 1/6 positions, 0/3 weekly trades used. daytrade_count 0.
+**Next:** Retry full exit at midday run once fills are processing. Alerted user via ClickUp.
