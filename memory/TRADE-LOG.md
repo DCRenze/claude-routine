@@ -59,3 +59,10 @@ Notes: Day 3. No trades today — held the single XLE position. XLE recovered mo
 No open positions. 100% cash.
 
 Notes: Day 4. Closed the lone XLE position today at midday — sold 300 sh @ $55.90 for a realized -$801.00 (-4.56%) after the morning RESEARCH-LOG killed the thesis on both legs (WTI ~$80, -20% on Iran de-escalation; rotation reversed tech-ward, XLE below 50-DMA). Not a -7% stop-out — a disciplined thesis-broken exit ahead of FOMC 6/17. Morning market-sell attempts sat unfilled in the paper engine and a protective fixed stop $52.97 GTC was held in the interim; midday retry filled in <1s. Day P&L -$480 / -0.48%; Phase P&L now -$801 / -0.80%, essentially the realized XLE loss since the book is flat. Account $99,198.99, 100% cash, 0/6 positions, no open orders, no naked exposure. Weekly new-trade count 0/3 (exit doesn't count). daytrade_count 0 (entry 6/11, exit 6/15 — not a day trade). PDT false. Next: redeploy per pre-market research; energy thesis dead, stay patient into FOMC 6/17.
+
+## Jun 16 — EOD Snapshot (Day 5, Tuesday)
+**Portfolio:** $99,198.93 | **Cash:** $99,198.93 (100%) | **Day P&L:** -$0.06 (-0.00%) | **Phase P&L:** -$801.07 (-0.80%)
+
+No open positions. 100% cash.
+
+Notes: Day 5. No trades, no positions, no open orders — held 100% cash through the session, so the book was unchanged and Day P&L is flat (-$0.06, rounding). Phase P&L holds at -$801.07 / -0.80%, still just the realized XLE loss from Monday. Deliberately sidelined ahead of the FOMC decision tomorrow (6/17) — no sense opening fresh risk into a binary macro event with the prior (energy) thesis dead. Dry powder fully intact for post-FOMC redeployment if pre-market research confirms a new setup. Weekly new-trade count 0/3, daytrade_count 0, PDT false. Next: pre-market research 6/17, then react to FOMC; stay patient, deploy toward the 75-85% target only on a confirmed thesis.
