@@ -163,3 +163,35 @@ HOLD. Keep XLE with 10% trail live as GTC; do NOT add, do NOT initiate new posit
 
 ### Decision
 HOLD. Keep XLE 10% trail live as GTC; do NOT add. XLE thesis is broken (oil -20%, below 50-DMA) — flag market-open run to trim/exit on weakness vs $54.47 manual-cut line; do not defend into FOMC. NO new positions into FOMC week. Deployed ~17% (1/6 positions, 0/3 weekly trades used this week). Patience > activity.
+
+## 2026-06-16 — Pre-market Research
+
+### Account
+- Equity: $99,198.93
+- Cash: $99,198.93 (100%)
+- Buying power: $396,795.72 (4x)
+- Daytrade count: 0
+- Open: NONE — flat, 100% cash (XLE closed 6/15 @ $55.90, realized -$801)
+- Note: Alpaca equity ~$99.2k vs $10k baseline (10x mismatch, flagged Day 1). Still treating $100k as working baseline.
+
+### Market Context
+- WTI / Brent: ~$81 WTI / ~$81-83 Brent — oil still soft, ~-27% MoM on Iran de-escalation. Energy headwind persists; thesis dead.
+- S&P futures: ES ~7,558-7,563, ~flat (+0.02%) premarket. Mon 6/15 was strong (ES +1.68%, NQ +3.06%, tech-led). Tape consolidating into FOMC.
+- VIX: ~16.2 — calm, 4.5-month low area. Low fear despite binary event tomorrow.
+- Today's macro: Tue 6/16 — building permits + housing starts (May). Minor vs the main event.
+- THE EVENT: **FOMC decision Wed 6/17 + retail sales same AM = binary.** Futures shifting to price rate HIKES (not cuts) under new Chair Warsh — hawkish surprise risk live despite cooler CPI/PPI (annual still above target).
+- Other: triple-witching week (OPEX flows). **Fri 6/19 Juneteenth — market CLOSED.** Shortened week.
+- Sector momentum (YTD): LEADING — Energy (#1 ~+23%, but rolling over/below 50-DMA), Materials (~+17%), Staples (~+16%), Industrials (~+14%). LAGGING — Financials, Cons Disc, Tech (-3% YTD but 6mo +18%, improving). RE/Utilities improving.
+
+### Trade Ideas
+1. NO new initiations today. Day before a binary FOMC + retail sales, with a genuine hawkish-surprise tail (Warsh hike pricing) — deploying fresh capital into the event violates patience > activity. Stay 100% cash.
+2. Post-FOMC watchlist (if dovish/neutral + tape holds): Industrials (XLI) — capex/AI-infra/defense tailwind, leading + above trend, cleaner than energy. Entry on strength post-decision, stop -8%, target +16%, min 2:1 R:R.
+3. Staples (XLP) — defensive leader if FOMC reads hawkish and tape wobbles; rotation beneficiary. WATCH only. Energy stays off the buy list (thesis broken, oil weak, below 50-DMA).
+
+### Risk Factors
+- FOMC 6/17 binary, made riskier by hawkish repricing (hikes under Warsh) vs a complacent VIX 16.2 — gap risk both ways. Do NOT pre-position.
+- Triple-witching flows can whip the tape into Friday; 6/19 holiday thins liquidity Thu PM.
+- Oil weak — energy leadership rolling over; avoid the YTD leader on a broken trend.
+
+### Decision
+HOLD. 100% cash, 0 positions, 0/3 weekly trades used. No initiation the day before a binary FOMC + retail sales with a live hawkish tail and complacent VIX. Re-assess at the post-decision runs 6/17: XLI lead watch (Industrials), XLP defensive backup; energy off the list. Patience > activity.
