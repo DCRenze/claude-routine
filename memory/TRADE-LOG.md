@@ -66,3 +66,10 @@ Notes: Day 4. Closed the lone XLE position today at midday — sold 300 sh @ $55
 No open positions. 100% cash.
 
 Notes: Day 5. No trades, no positions, no open orders — held 100% cash through the session, so the book was unchanged and Day P&L is flat (-$0.06, rounding). Phase P&L holds at -$801.07 / -0.80%, still just the realized XLE loss from Monday. Deliberately sidelined ahead of the FOMC decision tomorrow (6/17) — no sense opening fresh risk into a binary macro event with the prior (energy) thesis dead. Dry powder fully intact for post-FOMC redeployment if pre-market research confirms a new setup. Weekly new-trade count 0/3, daytrade_count 0, PDT false. Next: pre-market research 6/17, then react to FOMC; stay patient, deploy toward the 75-85% target only on a confirmed thesis.
+
+## Jun 17 — EOD Snapshot (Day 6, Wednesday)
+**Portfolio:** $99,198.93 | **Cash:** $99,198.93 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** -$801.07 (-0.80%)
+
+No open positions. 100% cash.
+
+Notes: Day 6, FOMC decision day. No trades, no positions, no open orders — held 100% cash through the session, so the book was unchanged and Day P&L is flat ($0.00). Phase P&L holds at -$801.07 / -0.80%, still just the realized XLE loss from Monday. Stayed deliberately sidelined through the FOMC decision rather than open fresh risk into the binary macro event with the prior (energy) thesis dead and no confirmed replacement setup. Dry powder fully intact for post-FOMC redeployment if pre-market research confirms a new thesis. Weekly new-trade count 0/3, daytrade_count 0, PDT false. Next: pre-market research 6/18 to digest the FOMC outcome/SEP/dot-plot and scout a confirmed setup; deploy toward the 75-85% target only on conviction — patience > activity.
