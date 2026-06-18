@@ -227,3 +227,35 @@ HOLD. 100% cash, 0 positions, 0/3 weekly trades used. No initiation the day befo
 
 ### Decision
 HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation ahead of the FOMC announcement + retail sales with a hawkish tail and complacent VIX. React at the post-decision market-open/midday runs: XLI lead watch (Industrials), XLP defensive backup; energy off the list, tech only on a clean dovish read. Patience > activity.
+
+## 2026-06-18 — Pre-market Research
+
+### Account
+- Equity: $99,198.93
+- Cash: $99,198.93 (100%)
+- Buying power: $396,795.72 (4x)
+- Daytrade count: 0 | PDT: false
+- Open: NONE — flat, 100% cash, no open orders (XLE closed 6/15 @ $55.90, realized -$801)
+- Note: Alpaca equity ~$99.2k vs $10k baseline (10x mismatch, flagged Day 1). Treating $100k as working baseline.
+
+### Market Context
+- **FOMC (6/17) — hawkish hold, resolved.** Held 3.50-3.75% UNANIMOUS. Dot plot shifted hawkish: median 3.8% end-2026 (up from 3.4% Mar) = no cut this year, ~half the committee sees a HIKE. Dropped forward guidance; statement shortened, easing-bias language removed. May CPI 4.2% (3-yr high). SPX closed **-1.21%** Wed on the read.
+- S&P futures: ES ~flat premarket (~7,490-7,523, mixed across feeds), NQ slightly green — tape stabilizing after Wed's drop. Binary event now behind us.
+- VIX: ~17-18 (June 17 close 18.44, +12.4%; premarket ~17.1). Bumped off the FOMC but still moderate, not panic.
+- WTI / Brent: ~$75 WTI / ~$80-84 Brent — oil still soft. Energy thesis stays dead.
+- Earnings (BMO): ACN, KR. Jobless claims 8:30am ET (prior 229k).
+- **Calendar: Fri 6/19 Juneteenth — market CLOSED.** Today is the last session of a thin, shortened week; liquidity dries up this afternoon ahead of the long weekend.
+- Sector momentum (YTD): LEADING — Energy (#1 ~+23%, but rolling over/oil weak), Materials ~+17%, Staples ~+16%, Industrials ~+14%. LAGGING — Financials ~-7%, Cons Disc ~-4%, Tech ~-3%. Rotation to value/cyclicals/equal-weight intact. Industrials (6mo +13%) backed by AI-infra/capex/defense capex — cleanest leadership.
+
+### Trade Ideas
+1. **XLI (Industrials) — LEAD candidate, not today.** Leading non-energy sector, above trend, AI-infra/capex/defense tailwind; the FOMC binary that kept us sidelined is now resolved. BUT do NOT initiate into a hawkish-Fed digestion tape on the Thursday before a Friday holiday (thin liquidity, weekend gap risk). Wait for confirmed strength — entry at the market-open run today only if tape holds green/opening range, else Mon 6/22. Entry on strength, stop -8%, target +16%, ≥2:1 R:R.
+2. **XLP (Staples) — defensive backup.** If post-FOMC tape stays heavy/risk-off, Staples is the rotation beneficiary. WATCH only.
+3. Energy stays OFF the list (broken thesis, WTI ~$75). Tech only on a clean re-acceleration — hawkish dots are a headwind for long-duration growth; not a pre-position.
+
+### Risk Factors
+- Hawkish dot plot (hike bias, no cuts) + 4.2% CPI = higher-for-longer overhang pressuring multiples; SPX just took -1.21%. New longs face a less friendly rate backdrop.
+- Thursday-before-holiday: thin afternoon liquidity, weekend headline/gap risk with market closed Fri 6/19. Poor session to force an entry.
+- VIX bumped to ~18 — digestion not yet complete; let the tape confirm direction.
+
+### Decision
+**HOLD pre-market.** 100% cash, 0 positions, 0/3 weekly trades used. FOMC binary is resolved, so the sideline reason is gone — but I won't force a fresh long into a hawkish-Fed digestion tape on the last thin session before a holiday. XLI is the prepared lead: take it at the market-open run ONLY on confirmed strength (tape green, holds opening range), otherwise wait for Mon 6/22. XLP defensive backup; energy off, tech not a pre-position. Patience > activity.
