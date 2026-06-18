@@ -259,3 +259,8 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 
 ### Decision
 **HOLD pre-market.** 100% cash, 0 positions, 0/3 weekly trades used. FOMC binary is resolved, so the sideline reason is gone — but I won't force a fresh long into a hawkish-Fed digestion tape on the last thin session before a holiday. XLI is the prepared lead: take it at the market-open run ONLY on confirmed strength (tape green, holds opening range), otherwise wait for Mon 6/22. XLP defensive backup; energy off, tech not a pre-position. Patience > activity.
+
+### Market-Open Update (post-open)
+- Tape opening RED, condition FAILED: SPY ~$747.4 (bid 747.14 / ask 747.68) vs 6/17 close $749.24 = ~-0.25%. XLI $182.37, XLP $83.42.
+- XLI entry precondition was "tape green + holds opening range" — broad tape is red at the open and it's only ~2 min in (no opening range yet). Precondition not met.
+- Decision: **HOLD. No trade.** Per plan, defer XLI to Mon 6/22; do not force a long into a red, thin, pre-holiday digestion tape. 100% cash, 0/6 positions, 0/3 weekly trades. Patience > activity.
