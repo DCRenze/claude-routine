@@ -264,3 +264,30 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - Tape opening RED, condition FAILED: SPY ~$747.4 (bid 747.14 / ask 747.68) vs 6/17 close $749.24 = ~-0.25%. XLI $182.37, XLP $83.42.
 - XLI entry precondition was "tape green + holds opening range" — broad tape is red at the open and it's only ~2 min in (no opening range yet). Precondition not met.
 - Decision: **HOLD. No trade.** Per plan, defer XLI to Mon 6/22; do not force a long into a red, thin, pre-holiday digestion tape. 100% cash, 0/6 positions, 0/3 weekly trades. Patience > activity.
+
+## 2026-06-19 — Pre-market Research (MARKET CLOSED — Juneteenth)
+
+### Account
+- Equity: $99,198.93 | Cash: $99,198.93 (100%) | BP: $396,795.72 (4x)
+- Daytrade count: 0 | PDT: false
+- Open: NONE — flat, 100% cash, no open orders. Book unchanged since XLE close 6/15.
+- Note: Alpaca equity ~$99.2k vs $10k baseline (10x mismatch, flagged Day 1). $100k working baseline.
+
+### Market Context
+- **US market CLOSED today — Juneteenth.** NYSE/Nasdaq + bond market shut; reopen Mon 6/22 normal hours. No trading possible today; this is prep for the Monday reopen. (Next holiday: Fri 7/3.)
+- WTI / Brent: ~$77.6 WTI / ~$84.6 Brent — oil firmed slightly off the Iran-de-escalation lows but still well below the war highs (~$90+ early June). Energy thesis stays dead/rolling over.
+- Sector momentum (YTD): LEADING — Energy +23.3% (#1 but rolling over, oil weak), Materials +17.4%, Staples +15.6%, Industrials +14.1%. LAGGING — Financials -6.9%, Cons Disc -3.8%, Tech -3.3%, Comm Svcs -1.2%. Value/cyclical/equal-weight rotation intact; Industrials (XLI) cleanest non-energy leadership (AI-infra/capex/defense tailwind, Leading quadrant).
+- Backdrop: post-FOMC (6/17) hawkish hold — median dots 3.8% end-2026 (no cut, ~half see a hike), CPI 4.2%. Higher-for-longer overhang on multiples; tech a laggard.
+
+### Trade Ideas (for Mon 6/22 reopen)
+1. **XLI (Industrials) — prepared LEAD.** Leading non-energy sector, above trend, AI-infra/capex/defense tailwind; FOMC binary resolved. Entry Mon 6/22 ONLY on confirmed strength (tape green, holds opening range). Stop -8%, target +16%, ≥2:1 R:R. ~20% sizing on confirmation.
+2. **XLP (Staples) — defensive backup.** If Monday tape stays heavy/risk-off, Staples is the rotation beneficiary. WATCH only.
+3. Energy OFF (broken thesis, WTI ~$77). Tech only on a clean re-acceleration — hawkish dots a headwind; not a pre-position.
+
+### Risk Factors
+- Market closed today → weekend headline/gap risk into Monday open; nothing to manage intraday.
+- Higher-for-longer overhang (hawkish dots + 4.2% CPI) pressures multiples; new longs face a less friendly rate backdrop.
+- Energy leadership rolling over on weak oil — avoid the YTD leader on a broken trend.
+
+### Decision
+**HOLD — market closed, no action possible today.** 100% cash, 0 positions, 0/3 weekly trades (week resets Mon). XLI remains the prepared lead for Mon 6/22, taken only on confirmed opening strength; XLP defensive backup; energy off, tech not a pre-position. Weekly review due (Friday cadence — note market closed today). Patience > activity.
