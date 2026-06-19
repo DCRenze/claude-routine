@@ -80,3 +80,10 @@ Notes: Day 6, FOMC decision day. No trades, no positions, no open orders — hel
 No open positions. 100% cash.
 
 Notes: Day 7, first session post-FOMC. No trades, no positions, no open orders — held 100% cash through the session, so the book was unchanged and Day P&L is flat ($0.00). Phase P&L holds at -$801.07 / -0.80%, still just the realized XLE loss from Monday. Did not redeploy: with the prior (energy) thesis dead and no confirmed replacement setup off the FOMC digest, opening fresh risk would violate patience > activity. Dry powder fully intact (0/6 positions, 0% deployed vs 75-85% target) for a conviction entry once pre-market research confirms a thesis. Weekly new-trade count 0/3, daytrade_count 0, PDT false. Next: pre-market research 6/19 to scout a confirmed post-FOMC setup; deploy toward target only on conviction, ahead of Friday's weekly review.
+
+## Jun 19 — EOD Snapshot (Day 8, Friday)
+**Portfolio:** $99,198.93 | **Cash:** $99,198.93 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** -$801.07 (-0.80%)
+
+No open positions. 100% cash.
+
+Notes: Day 8, second session post-FOMC. No trades, no positions, no open orders — held 100% cash through the session, so the book was unchanged and Day P&L is flat ($0.00). Phase P&L holds at -$801.07 / -0.80%, still just the realized XLE loss from Monday. Did not redeploy: with the prior (energy) thesis dead and no confirmed replacement setup, opening fresh risk would violate patience > activity. Dry powder fully intact (0/6 positions, 0% deployed vs 75-85% target) for a conviction entry once pre-market research confirms a thesis. Weekly new-trade count 0/3, daytrade_count 0, PDT false. Note: this is the fourth straight flat/cash session (Tue-Fri) — extended idleness vs the 75-85% deployment mandate; weekly review due this afternoon should address the lack of a confirmed setup and whether the screening process is too restrictive. Next: weekly review, then pre-market research Monday to scout a confirmed setup; deploy toward target only on conviction.
