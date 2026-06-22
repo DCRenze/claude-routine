@@ -291,3 +291,34 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 
 ### Decision
 **HOLD — market closed, no action possible today.** 100% cash, 0 positions, 0/3 weekly trades (week resets Mon). XLI remains the prepared lead for Mon 6/22, taken only on confirmed opening strength; XLP defensive backup; energy off, tech not a pre-position. Weekly review due (Friday cadence — note market closed today). Patience > activity.
+
+## 2026-06-22 — Pre-market Research (Day 9, Monday — first session post-Juneteenth)
+
+### Account
+- Equity: $99,198.93 | Cash: $99,198.93 (100%) | BP: $396,795.72 (4x)
+- Daytrade count: 0 | PDT: false
+- Open: NONE — flat, 100% cash, no open orders. Book unchanged since XLE close 6/15.
+- Note: Alpaca equity ~$99.2k vs $10k baseline (10x mismatch, flagged Day 1). $100k working baseline.
+
+### Market Context
+- **Weekend geopolitics dominate.** Reports of a US strike on Iran over the weekend, then interim ceasefire / Strait of Hormuz reopening progress. Markets trading the escalation-vs-relief balance — two-sided, headline-driven tape. Truce-holding is the key risk.
+- S&P futures: ES ~7,566 (-0.06% to -0.3% premarket, mixed feeds); NQ slightly green (~+0.1%). Dow futures ~-72. Modestly negative / mixed open expected.
+- VIX: ~17.46, +4% on the day (open 17.04, prev close 16.40) — bumped on the Middle East headlines, still moderate (not panic).
+- WTI / Brent: ~$75.5 WTI (CME front-month, -0.5%) — oil DOWN on ceasefire/Hormuz-reopen progress despite the strike. Energy thesis stays dead/whippy.
+- Earnings (BMO): no noteworthy US large-caps (FFIV among the few). Quiet.
+- Calendar: **light week.** Key print = May Personal Income & PCE deflator **Fri 6/26 8:30am ET** (Fed's preferred gauge, watched post-hawkish-FOMC). Initial claims Thu 6/25. No CPI/PPI/FOMC/jobs this week.
+- Sector momentum (6mo): Tech +18.7%, Industrials +13.1% (12mo +23.7%, Schwab "More Favored" — AI-infra/capex/defense, but valuations near record), Staples +9.9%. Energy was YTD #1 but rolling over on weak oil. Rotation toward cyclicals/value intact; Industrials cleanest non-energy leadership.
+
+### Trade Ideas
+1. **XLI (Industrials) — prepared LEAD, conditional.** Leading non-energy sector, above trend, AI-infra/capex/defense tailwind; FOMC binary resolved. Take at the **market-open run ONLY on confirmed strength** (broad tape green, XLI holds opening range). Ref last close ~$182. ~20% sizing (~$20k) on confirmation. Stop -8%, target +16%, ≥2:1 R:R, 10% trailing GTC at entry (initial fixed/trail per the never-within-3% rule). If the geopolitical tape opens red/risk-off, STAND DOWN.
+2. **XLP (Staples) — defensive backup.** If the truce wobbles and tape goes risk-off, Staples is the rotation beneficiary. WATCH only (~$83 ref).
+3. Energy OFF (broken thesis, WTI ~$75; oil falling on Hormuz reopen even after the strike — two-sided, not a clean long). Tech only on a clean re-acceleration — hawkish dots a headwind; not a pre-position.
+
+### Risk Factors
+- **Geopolitical headline risk is the dominant variable today** — a broken truce / Hormuz re-closure would spike oil and gap equities lower; gap risk in both directions. Don't pre-position into it.
+- Higher-for-longer overhang (hawkish 6/17 dots, no cuts, CPI 4.2%) pressures multiples; PCE Fri 6/26 is the next macro test. New longs face a less friendly rate backdrop.
+- XLI valuations near record after strong inflows (Schwab flag) — chasing without confirmed strength risks a poor entry.
+- VIX bumped +4% — digestion of the weekend news not complete; let the tape confirm direction.
+
+### Decision
+**HOLD pre-market.** 100% cash, 0/6 positions, 0/3 weekly trades (week reset Monday). Sideline reasons (FOMC, holiday) are gone, but the tape is a two-sided geopolitical-headline session with VIX bumped — won't force a long pre-open. XLI is the prepared lead: take it at the **market-open run ONLY on confirmed opening strength** (tape green, holds range); if the Middle East tape opens red/risk-off, stand down and keep XLP as the defensive watch. Energy off, tech not a pre-position. Patience > activity.
