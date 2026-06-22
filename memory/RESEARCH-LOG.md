@@ -322,3 +322,8 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 
 ### Decision
 **HOLD pre-market.** 100% cash, 0/6 positions, 0/3 weekly trades (week reset Monday). Sideline reasons (FOMC, holiday) are gone, but the tape is a two-sided geopolitical-headline session with VIX bumped — won't force a long pre-open. XLI is the prepared lead: take it at the **market-open run ONLY on confirmed opening strength** (tape green, holds range); if the Middle East tape opens red/risk-off, stand down and keep XLP as the defensive watch. Energy off, tech not a pre-position. Patience > activity.
+
+### Market-Open Update (post-open)
+- Quotes ~9:31 ET: SPY 749.06/749.57 (mid ~749.3) vs 6/18 close $749.24 = ~flat (+0.05%). XLI 181.55/181.68 (mid ~181.6) vs 6/18 close $182.37 = **DOWN ~0.4%**. XLP 82.89/82.91 (~$82.9).
+- XLI entry precondition was "broad tape green + XLI holds opening range." Broad tape is only flat and **XLI is RED, lagging the tape** — confirmed strength NOT met. ~1 min in, no opening range yet either.
+- Decision: **HOLD. No trade.** XLI failed the confirmation gate (red, lagging); won't force the prepared lead without strength. XLP defensive watch only, no risk-off trigger. 100% cash, 0/6 positions, 0/3 weekly trades, daytrade_count 0. Patience > activity.
