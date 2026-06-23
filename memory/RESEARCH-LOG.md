@@ -360,3 +360,9 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 
 ### Decision
 **HOLD — no new trades.** Cancelled the 10 unauthorized orders; account is flat and protected. Standing down on all new entries until the user confirms API-key security and authorizes redeployment. 100% cash, 0/6 positions, 0/3 weekly trades, daytrade_count 0. Patience > activity — and security first.
+
+### Market-Open Update (post-open) — INCIDENT CONTAINMENT HELD
+- **The cancel-all held through the open.** The 10 unauthorized orders were DAY tif timed to fill at the 13:30Z open; re-checked account at the market-open run and it is still flat: equity $99,198.93, cash 100%, **0 positions, 0 open orders**, daytrade_count 0, PDT false. No orders reappeared or filled. The exact window the rogue orders targeted has now passed with no execution.
+- No new unauthorized activity since the pre-market cancel-all → no evidence of a second injection this session, but the API key remains potentially compromised until rotated.
+- **No trades placed** (standing down per incident). Account protected.
+- **User action still required:** rotate ALPACA_API_KEY/SECRET and audit account activity before authorizing redeployment. Trading stays halted until confirmed.
