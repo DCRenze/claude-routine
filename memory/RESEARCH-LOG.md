@@ -327,3 +327,36 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - Quotes ~9:31 ET: SPY 749.06/749.57 (mid ~749.3) vs 6/18 close $749.24 = ~flat (+0.05%). XLI 181.55/181.68 (mid ~181.6) vs 6/18 close $182.37 = **DOWN ~0.4%**. XLP 82.89/82.91 (~$82.9).
 - XLI entry precondition was "broad tape green + XLI holds opening range." Broad tape is only flat and **XLI is RED, lagging the tape** — confirmed strength NOT met. ~1 min in, no opening range yet either.
 - Decision: **HOLD. No trade.** XLI failed the confirmation gate (red, lagging); won't force the prepared lead without strength. XLP defensive watch only, no risk-off trigger. 100% cash, 0/6 positions, 0/3 weekly trades, daytrade_count 0. Patience > activity.
+
+## 2026-06-23 — Pre-market Research (Day 10, Tuesday)
+
+### ⚠️ SECURITY INCIDENT — UNAUTHORIZED ORDERS (top priority)
+- Found **10 open buy limit orders** at session start that are in NO trade/research log (6/22 EOD logged "no open orders," 6/22 open update logged "no trade"). Appeared overnight: created 2026-06-23T04:35Z, submitted 08:01Z, DAY tif, expire 20:00Z.
+- Orders (~$48k total notional): AKAM 42@115.46, JNJ 21@227.65, ROKU 37@130.74, LIN 9@509.12, NET 23@208.42, SLB 106@46.48, CDNS 13@376.92, PM 29@169.42, SATS 50@99.19, GOOGL 14@340.30. client_order_id pattern `A-<SYM>-20260622-buy`, **`source: access_key`** (placed via direct API key, not the Alpaca UI).
+- Hard-rule breaches if filled: 10 positions (max 5-6), 10 new trades (max 3/wk), no GTC trailing stops, zero thesis. Would fill at the 13:30Z open.
+- **ACTION TAKEN: cancelled all 10 (cancel-all, verified 0 open orders) before the open.** Account now flat: equity $99,198.93, cash 100%, 0 positions, 0 orders, daytrade_count 0, PDT false.
+- Likely a rogue process or **compromised ALPACA API key**. Sent urgent ClickUp alert. **Recommend rotating ALPACA_API_KEY/SECRET and auditing account activity before any further trading.**
+
+### Account
+- Equity: $99,198.93 | Cash: $99,198.93 (100%) | BP: $348,488.81 (4x) | Daytrade count: 0 | PDT: false
+- Open: NONE after cancel-all. (Alpaca equity ~$99.2k vs $10k baseline — known 10x mismatch; $100k working baseline.)
+
+### Market Context
+- S&P futures: ES ~7,549.5 (-0.28% premarket); NQ slightly red, Dow futures green — mixed/modestly negative open.
+- VIX: not available from feeds this morning.
+- Oil: WTI ~$73, Brent ~$77.6, both down (~-2 to -4%); crude -21.5% over the past month. Energy still rolling over — thesis stays dead.
+- Macro: AI-capex boom remains the dominant tailwind; strong jobs + rising inflation (oil/tariffs) keep the Fed higher-for-longer (cuts unlikely, hike risk discussed). Key event today: Fed Waller speech. This week's main print = May PCE deflator Fri 6/26 8:30am ET.
+- Sectors: Tech leading (AI buildout), Industrials #2 / cyclicals firm; Energy a laggard.
+
+### Trade Ideas
+1. **NO new entries today** — see incident. Do not deploy while API-key integrity is unconfirmed; opening positions atop a possibly-compromised key is reckless.
+2. (On a clean key) XLI / Industrials remains the prepared non-energy lead, taken only on confirmed opening strength, ~20% size, stop -8% / target +16%, 10% trailing GTC at entry.
+3. Energy OFF (WTI ~$73, broken trend). Tech only on a clean re-acceleration, not a pre-position into hawkish Fed.
+
+### Risk Factors
+- **Account security is the dominant risk today** — unexplained order-placement via the API key. Treat the key as potentially compromised until rotated.
+- Higher-for-longer Fed (no cuts, hike risk); PCE Fri 6/26 next macro test.
+- Iran/Mideast headline risk two-sided; oil whippy.
+
+### Decision
+**HOLD — no new trades.** Cancelled the 10 unauthorized orders; account is flat and protected. Standing down on all new entries until the user confirms API-key security and authorizes redeployment. 100% cash, 0/6 positions, 0/3 weekly trades, daytrade_count 0. Patience > activity — and security first.
