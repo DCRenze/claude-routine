@@ -366,3 +366,10 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - No new unauthorized activity since the pre-market cancel-all → no evidence of a second injection this session, but the API key remains potentially compromised until rotated.
 - **No trades placed** (standing down per incident). Account protected.
 - **User action still required:** rotate ALPACA_API_KEY/SECRET and audit account activity before authorizing redeployment. Trading stays halted until confirmed.
+
+### Midday Scan (Day 10, Tuesday) — INCIDENT CONTAINMENT STILL HOLDING
+- Re-checked account at the midday run: still flat and protected. Equity $99,198.93, cash 100%, **0 positions, 0 open orders**, daytrade_count 0, PDT false, not blocked.
+- **No new unauthorized orders since the pre-market cancel-all.** All-orders history shows the 10 rogue buy limits canceled at 11:04:36Z and NOTHING created after — no second injection between cancel-all and midday. The 13:30Z open passed with no fills.
+- Midday steps 3–6 are no-ops: no positions to cut, no winners to tighten, no thesis to manage (book flat per incident stand-down).
+- Note on diagnostics: every order in this account — incl. the legit 6/11–6/15 XLE trades — carries `source: access_key`, so that field alone is NOT a compromise marker. The 10 orders remain clearly unauthorized (absent from all logs, distinct `A-<SYM>-20260622-buy` client_order_id pattern, created overnight 04:35Z).
+- **No trades placed** (standing down per incident). **User action still required:** rotate ALPACA_API_KEY/SECRET and audit account activity before authorizing redeployment. Trading stays halted until confirmed. No new ClickUp alert this run (already escalated pre-market; no recurrence to report).
