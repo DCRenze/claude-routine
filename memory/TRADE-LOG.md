@@ -101,3 +101,20 @@ Notes: Day 9, start of a new week. No trades, no positions, no open orders — h
 No open positions. 100% cash.
 
 Notes: Day 10. No trades, no positions, no open orders — held 100% cash through the session, so the book was unchanged and Day P&L is flat ($0.00). Phase P&L holds at -$801.07 / -0.80%, still just the realized XLE loss from Jun 15. Did not redeploy: no confirmed replacement setup, so opening fresh risk would violate patience > activity. Dry powder fully intact (0/6 positions, 0% deployed vs 75-85% target). Weekly new-trade count 0/3, daytrade_count 0, PDT false. ESCALATING CONCERN: this is now the SIXTH straight flat/cash session (Tue 6/16 → Tue 6/23) — over a full trading week fully idle against the 75-85% deployment mandate. Today's pre-market research was supposed to break the streak with a confirmed setup and did not. The screening process is not producing actionable theses; either it is too restrictive or the strategy's screen criteria need revisiting at the next weekly review. Capital remains unproductive while the S&P benchmark compounds — opportunity cost is now the dominant risk vs the original XLE drawdown. Next: pre-market research Wednesday 6/24 must surface a conviction setup to begin redeploying; if another empty session follows, treat the screen itself as the problem to fix, not the market.
+
+## Jun 24 — EOD Snapshot (Day 11, Wednesday) — SECURITY INCIDENT ESCALATED: rogue positions FILLED
+**Portfolio:** $99,463.73 | **Cash:** $77,353.50 (77.8%) | **Day P&L:** +$264.80 (+0.27%) | **Phase P&L:** -$536.27 (-0.54%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop | Notes |
+|--------|-------|----------|----------|--------|-----------|------|-------|
+| AAPL | 9  | 293.36   | 294.51   | +0.07% | +$10.35 | NONE | unauthorized — close queued |
+| AMD  | 5  | 519.84   | 524.50   | +0.89% | +$23.30 | NONE | unauthorized — close queued |
+| AVGO | 7  | 382.13   | 383.75   | +0.95% | +$11.34 | NONE | unauthorized — close queued |
+| INTC | 22 | 131.90   | 133.77   | +1.13% | +$41.14 | NONE | unauthorized — close queued |
+| MRVL | 8  | 276.52   | 278.00   | -0.37% | +$11.84 | NONE | unauthorized — close queued |
+| MSFT | 8  | 365.40   | 366.12   | -2.09% | +$5.76  | NONE | unauthorized — close queued |
+| MU   | 2  | 1047.55  | 1095.20  | +4.13% | +$95.30 | NONE | unauthorized — close queued |
+| SNDK | 1  | 1921.82  | 1981.59  | +0.92% | +$59.77 | NONE | unauthorized — close queued |
+| TSLA | 5  | 375.40   | 376.80   | -1.26% | +$7.00  | NONE | unauthorized — close queued |
+
+Notes: Day 11 — the API-key compromise ESCALATED. Pre-market, market-open, and midday runs today all verified the account FLAT (0 positions, 0 orders) with trading halted pending key rotation. Yet between the midday check and the close, a NEW batch of 9 unauthorized positions FILLED (AAPL/AMD/AVGO/INTC/MRVL/MSFT/MU/SNDK/TSLA — different tickers than the 9 rogue DAY orders cancelled this morning). All 9 entered intraday today, NAKED (no protective stops), ~$22.1k notional. This is the first time the attacker's orders have actually executed rather than being caught pending — containment by cancel-each-morning has now FAILED. Per the established incident response (do not carry unauthorized exposure), I submitted market sell-to-close orders on all 9; market is closed (16:00 ET) so they are queued and will flatten at the 6/25 09:30 ET open. Account: equity $99,463.73, cash $77,353.50, daytrade_count 0, PDT false. Day P&L +$264.80 (these are the attacker's unrealized gains, not earned by strategy); Phase P&L -$536.27. Weekly authorized new-trade count 0/3. ROOT CAUSE REMAINS UNFIXED: ALPACA_API_KEY/SECRET is compromised and must be rotated by the user immediately — queued liquidation is a stopgap; the attacker can re-inject overnight. Next: pre-market 6/25 must re-cancel any new injections and confirm the queued sells flattened the book; NO authorized trading resumes until the key is rotated and account security confirmed.
