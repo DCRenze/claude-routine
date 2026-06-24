@@ -366,3 +366,37 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - No new unauthorized activity since the pre-market cancel-all → no evidence of a second injection this session, but the API key remains potentially compromised until rotated.
 - **No trades placed** (standing down per incident). Account protected.
 - **User action still required:** rotate ALPACA_API_KEY/SECRET and audit account activity before authorizing redeployment. Trading stays halted until confirmed.
+
+## 2026-06-24 — Pre-market Research (Day 11, Wednesday)
+
+### 🚨 SECURITY INCIDENT — UNAUTHORIZED ORDERS RECURRED (top priority)
+- Yesterday (6/23) I cancelled 10 rogue buy orders and flagged the API key as likely compromised, recommending immediate rotation. **The key was NOT rotated — the attack repeated tonight.**
+- Found **9 new unauthorized buy limit orders** at session start, none in any trade/research log: created 2026-06-23T20:45:55Z (just after yesterday's session), submitted 2026-06-24T08:04:14Z, DAY tif, expire 20:00Z — timed to fill at the 13:30Z open.
+- Orders (~$48k notional): AXP 14@332.15, RKLB 56@87.46, GS 4@1069.64, SLB 106@46.37, GOOGL 14@336.97, CDNS 13@367.27, LITE 6@768.59, HLT 14@337.63, ROKU 37@130.94. client_order_id pattern `A-<SYM>-20260623-buy` — same signature as the 6/23 batch. (Note: `source` field null this time vs `access_key` on 6/23, but pattern/timing identical.)
+- Hard-rule breaches if filled: 9 positions (max 5-6), 9 new trades (max 3/wk), no GTC trailing stops, zero thesis.
+- **ACTION TAKEN: cancelled all 9 (status 200 each), verified 0 open orders / 0 positions before the open.** Account flat: equity $99,198.93, cash 100%, daytrade_count 0, PDT false.
+- This is now a CONFIRMED, PERSISTENT compromise — automated re-injection nightly. The ALPACA key must be rotated immediately; cancelling each morning is not a fix.
+
+### Account
+- Equity: $99,198.93 | Cash: $99,198.93 (100%) | BP: $354,378.76 (4x) | Daytrade count: 0 | PDT: false
+- Open: NONE after cancel-all. ($100k working baseline, known 10x mismatch vs $10k nominal.)
+
+### Market Context
+- S&P futures: ES ~7,440 (**-1.33%** premarket); **NQ -3.01%** (tech selloff on stretched-valuation de-risking); Dow futures ~flat (-0.08%). Risk-OFF open shaping up.
+- VIX: not available from feeds this morning (would expect elevated given the futures drop).
+- Oil: WTI ~$72-73 (3.5-mo low), Brent ~$78. Energy still rolling over — thesis stays dead.
+- Catalysts: NVDA annual shareholder meeting today; AI-capex boom ($725B 2026 hyperscaler capex, +77% YoY) still the structural tailwind, but today's tape is a tech-led pullback. No major scheduled econ release today; key print = May PCE deflator Fri 6/26 8:30am ET.
+- Sectors: Tech led last month (+~16%) but de-rating today; Industrials/cyclicals firmer; Energy laggard.
+
+### Trade Ideas
+1. **NO new entries today** — account-security integrity is unresolved (persistent compromise) AND the tape is risk-off (NQ -3%). Two independent reasons to stand down. Deploying capital atop a compromised key into a -1.3% futures open is reckless.
+2. (On a clean/rotated key, calmer tape) XLI / Industrials remains the prepared non-energy lead — confirmed opening strength only, ~20% size, stop -8% / target +16%, 10% trailing GTC at entry.
+3. Energy OFF (WTI ~$72). Tech NOT a buy into a valuation-driven selloff; wait for stabilization.
+
+### Risk Factors
+- **Persistent API-key compromise is the dominant risk** — rogue orders re-injected nightly. Until the key is rotated, every session opens with unauthorized exposure that must be cancelled pre-open.
+- Risk-off tape: NQ -3%, broad de-risking on tech valuations. Gap-down open likely.
+- Higher-for-longer Fed; PCE Fri 6/26 next macro test. Oil whippy on Mideast headlines.
+
+### Decision
+**HOLD — no new trades. Trading halted pending key rotation.** Cancelled the 9 unauthorized orders; account is flat and protected. Standing down on all entries until the user rotates ALPACA_API_KEY/SECRET and confirms account security. Even absent the incident, the risk-off tape argues against new longs today. 100% cash, 0/6 positions, 0/3 weekly trades, daytrade_count 0. Security first, then patience > activity.
