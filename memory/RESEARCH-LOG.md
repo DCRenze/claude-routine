@@ -406,3 +406,8 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - No new unauthorized activity observed this session beyond the 9 already cancelled pre-market.
 - **No trades placed** (standing down per incident + risk-off tape). Per plan, no new longs.
 - **User action STILL required and now urgent:** this is the SECOND consecutive day of nightly rogue-order injection (6/23 and 6/24) on an unrotated key. Cancelling each morning is not a fix. Rotate ALPACA_API_KEY/SECRET and audit account activity immediately. Trading stays halted until the key is confirmed clean.
+
+### Midday Scan Update (Day 11, Wed 6/24) — CONTAINMENT STILL HOLDS
+- Midday re-check: account **flat — 0 positions, 0 open orders**. None of the 9 rogue orders cancelled pre-market reappeared, and **no new unauthorized orders injected** since the market-open run. Fill window passed unexecuted.
+- No trading action at midday: no positions to cut/tighten, no theses to revisit. Standing down per active incident + risk-off tape.
+- User action STILL required: rotate ALPACA_API_KEY/SECRET and audit account. Unchanged from pre-market/market-open alerts — no new development to re-alert on.
