@@ -400,3 +400,9 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 
 ### Decision
 **HOLD — no new trades. Trading halted pending key rotation.** Cancelled the 9 unauthorized orders; account is flat and protected. Standing down on all entries until the user rotates ALPACA_API_KEY/SECRET and confirms account security. Even absent the incident, the risk-off tape argues against new longs today. 100% cash, 0/6 positions, 0/3 weekly trades, daytrade_count 0. Security first, then patience > activity.
+
+### Market-Open Update (post-open) — INCIDENT CONTAINMENT HELD (Day 2 of recurrence)
+- **The pre-market cancel-all held through the 13:30Z open.** Re-checked account at the market-open run: equity $99,198.93, cash 100%, **0 positions, 0 open orders**, daytrade_count 0, PDT false. None of the 9 unauthorized DAY orders reappeared or filled; their fill window has now passed unexecuted. Account remains flat and protected.
+- No new unauthorized activity observed this session beyond the 9 already cancelled pre-market.
+- **No trades placed** (standing down per incident + risk-off tape). Per plan, no new longs.
+- **User action STILL required and now urgent:** this is the SECOND consecutive day of nightly rogue-order injection (6/23 and 6/24) on an unrotated key. Cancelling each morning is not a fix. Rotate ALPACA_API_KEY/SECRET and audit account activity immediately. Trading stays halted until the key is confirmed clean.
