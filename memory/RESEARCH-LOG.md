@@ -447,3 +447,10 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 
 ### Decision
 **HOLD / TRADING HALTED — security first.** Cancelled the 4th batch of 9 rogue buys; preserved the 9 sell-to-close orders that will flatten yesterday's unauthorized fills at the open. NO authorized trading resumes until the user rotates ALPACA_API_KEY/SECRET and confirms the account is clean. 0/6 authorized positions, 0/3 weekly trades, daytrade_count 0. Next (market-open run): confirm the 9 sells filled and the book is flat, and re-cancel any fresh injection.
+
+### Market-Open Update (post-open) — ALL UNAUTHORIZED POSITIONS FLATTENED ✅
+- At the 13:30Z open the 9 preserved sell-to-close orders began filling. No fresh rogue BUY injection this session beyond the 4th batch already cancelled pre-market — the open book was exactly my 9 legit sells.
+- Liquidation progressed but the paper engine throttled the market sells (filled a burst, then stalled). Drove the flatten to completion by cancelling stalled remainders and re-issuing market sell-to-close / close-all in jolts: long MV $22,934 → $16k → $8.7k → $6.4k → $3.2k → $1.8k → $0.
+- **Final state: account FULLY FLAT — 0 positions, 0 open orders, long MV $0.** Equity $100,219.35, cash $100,219.35 (100%), daytrade_count 0, PDT false. (Equity > yesterday's $99,463.73 because the rogue lots drifted up before liquidation — incidental, not strategy-earned.)
+- **No authorized trades placed.** Trading stays halted. 0/6 authorized positions, 0/3 weekly trades.
+- **User action STILL required and now CRITICAL — Day 4 of an active, automated compromise with executions now occurring.** Cancel-each-morning is no longer sufficient (fills got through 6/24). ROTATE ALPACA_API_KEY/SECRET immediately and audit account activity. No authorized trading resumes until the key is confirmed clean. Next: midday run re-verifies flat and re-cancels any new injection.

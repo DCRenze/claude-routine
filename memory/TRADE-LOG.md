@@ -117,4 +117,38 @@ Notes: Day 10. No trades, no positions, no open orders — held 100% cash throug
 | SNDK | 1  | 1921.82  | 1981.59  | +0.92% | +$59.77 | NONE | unauthorized — close queued |
 | TSLA | 5  | 375.40   | 376.80   | -1.26% | +$7.00  | NONE | unauthorized — close queued |
 
+## Jun 25 — Market-Open: UNAUTHORIZED POSITIONS FLATTENED (Day 12, Thursday)
+**Portfolio:** $100,219.35 | **Cash:** $100,219.35 (100%) | **Positions:** 0 | **Open orders:** 0 | daytrade_count 0 | PDT false
+
+Containment liquidation (NOT strategy trades) — closed all 9 unauthorized positions filled by the attacker on 6/24:
+
+| Ticker | Shares closed | Avg entry | Side | Notes |
+|--------|--------------|-----------|------|-------|
+| AAPL | 9  | 293.36  | sell_to_close | unauthorized — flattened |
+| AMD  | 5  | 519.84  | sell_to_close | unauthorized — flattened |
+| AVGO | 7  | 382.13  | sell_to_close | unauthorized — flattened |
+| INTC | 22 | 131.90  | sell_to_close | unauthorized — flattened |
+| MRVL | 8  | 276.52  | sell_to_close | unauthorized — flattened |
+| MSFT | 8  | 365.40  | sell_to_close | unauthorized — flattened |
+| MU   | 2  | 1047.55 | sell_to_close | unauthorized — flattened |
+| SNDK | 1  | 1921.82 | sell_to_close | unauthorized — flattened |
+| TSLA | 5  | 375.40  | sell_to_close | unauthorized — flattened |
+
+Notes: Day 12 market-open run. The 9 sell-to-close orders queued 6/24 EOD filled at the 13:30Z open; paper engine throttled the market fills so I forced completion with cancel + re-issue (close-all) jolts until long MV reached $0. Also confirmed NO fresh rogue BUY injection this session beyond the 4th batch cancelled pre-market. Account now FULLY FLAT: 0 positions, 0 open orders, 100% cash $100,219.35, daytrade_count 0, PDT false. These were containment liquidations of attacker-opened positions, not authorized strategy entries — weekly authorized new-trade count stays 0/3. ROOT CAUSE STILL UNFIXED: ALPACA_API_KEY/SECRET compromised, 4th consecutive day of automated overnight rogue-order injection with executions now occurring. User MUST rotate the key and audit the account; cancel/flatten each session is only a stopgap. NO authorized trading resumes until the key is confirmed clean.
+
+## Jun 24 — EOD Snapshot (Day 11, Wednesday) — SECURITY INCIDENT ESCALATED: rogue positions FILLED
+**Portfolio:** $99,463.73 | **Cash:** $77,353.50 (77.8%) | **Day P&L:** +$264.80 (+0.27%) | **Phase P&L:** -$536.27 (-0.54%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop | Notes |
+|--------|-------|----------|----------|--------|-----------|------|-------|
+| AAPL | 9  | 293.36   | 294.51   | +0.07% | +$10.35 | NONE | unauthorized — close queued |
+| AMD  | 5  | 519.84   | 524.50   | +0.89% | +$23.30 | NONE | unauthorized — close queued |
+| AVGO | 7  | 382.13   | 383.75   | +0.95% | +$11.34 | NONE | unauthorized — close queued |
+| INTC | 22 | 131.90   | 133.77   | +1.13% | +$41.14 | NONE | unauthorized — close queued |
+| MRVL | 8  | 276.52   | 278.00   | -0.37% | +$11.84 | NONE | unauthorized — close queued |
+| MSFT | 8  | 365.40   | 366.12   | -2.09% | +$5.76  | NONE | unauthorized — close queued |
+| MU   | 2  | 1047.55  | 1095.20  | +4.13% | +$95.30 | NONE | unauthorized — close queued |
+| SNDK | 1  | 1921.82  | 1981.59  | +0.92% | +$59.77 | NONE | unauthorized — close queued |
+| TSLA | 5  | 375.40   | 376.80   | -1.26% | +$7.00  | NONE | unauthorized — close queued |
+
 Notes: Day 11 — the API-key compromise ESCALATED. Pre-market, market-open, and midday runs today all verified the account FLAT (0 positions, 0 orders) with trading halted pending key rotation. Yet between the midday check and the close, a NEW batch of 9 unauthorized positions FILLED (AAPL/AMD/AVGO/INTC/MRVL/MSFT/MU/SNDK/TSLA — different tickers than the 9 rogue DAY orders cancelled this morning). All 9 entered intraday today, NAKED (no protective stops), ~$22.1k notional. This is the first time the attacker's orders have actually executed rather than being caught pending — containment by cancel-each-morning has now FAILED. Per the established incident response (do not carry unauthorized exposure), I submitted market sell-to-close orders on all 9; market is closed (16:00 ET) so they are queued and will flatten at the 6/25 09:30 ET open. Account: equity $99,463.73, cash $77,353.50, daytrade_count 0, PDT false. Day P&L +$264.80 (these are the attacker's unrealized gains, not earned by strategy); Phase P&L -$536.27. Weekly authorized new-trade count 0/3. ROOT CAUSE REMAINS UNFIXED: ALPACA_API_KEY/SECRET is compromised and must be rotated by the user immediately — queued liquidation is a stopgap; the attacker can re-inject overnight. Next: pre-market 6/25 must re-cancel any new injections and confirm the queued sells flattened the book; NO authorized trading resumes until the key is rotated and account security confirmed.
