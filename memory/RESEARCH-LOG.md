@@ -411,3 +411,39 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - Midday re-check: account **flat — 0 positions, 0 open orders**. None of the 9 rogue orders cancelled pre-market reappeared, and **no new unauthorized orders injected** since the market-open run. Fill window passed unexecuted.
 - No trading action at midday: no positions to cut/tighten, no theses to revisit. Standing down per active incident + risk-off tape.
 - User action STILL required: rotate ALPACA_API_KEY/SECRET and audit account. Unchanged from pre-market/market-open alerts — no new development to re-alert on.
+
+## 2026-06-25 — Pre-market Research (Day 12, Thursday)
+
+### 🚨 SECURITY INCIDENT — DAY 4 OF INJECTION; ROGUE POSITIONS FILLED, NOW BEING FLATTENED (top priority)
+- Background: 6/23 and 6/24 the attacker injected nightly rogue buy orders (cancelled pre-open each day). On 6/24 the attack ESCALATED — 9 unauthorized positions actually FILLED intraday (AAPL/AMD/AVGO/INTC/MRVL/MSFT/MU/SNDK/TSLA, ~$22k notional, naked/no stops). I queued market sell-to-close on all 9 at yesterday's close.
+- **This morning's state:**
+  - The 9 queued sell-to-close orders are LIVE and pending (status new, DAY tif) — they will flatten the rogue positions at the 13:30Z / 09:30 ET open. Positions still show on the book with qty_available=0 (locked by the pending sells). KEPT these — they are my containment.
+  - Found a **NEW 4th batch of 9 unauthorized BUY orders** injected overnight: SLB 110@45.19, CDNS 13@361.19, LITE 6@784.40, ROKU 37@132.04, WDC 8@602.55, MPWR 3@1357.21, CASY 6@774.73, RKLB 64@77.74, GS 4@1052.64. Same signature `A-<SYM>-20260624-buy`, created 2026-06-24T20:46Z, submitted 08:01Z, DAY tif expire 20:00Z — timed for the open. ~$120k notional if filled.
+- **ACTION TAKEN:** cancelled all 9 new rogue buys individually by order ID (204 each), preserving my 9 sell-to-close orders. Verified open book = exactly the 9 legit sells, 0 rogue orders remaining.
+- This is a CONFIRMED, PERSISTENT, AUTOMATED compromise on its 4th consecutive day. The 6/24 fills prove cancel-each-morning is no longer fully containing it. **ALPACA_API_KEY/SECRET MUST be rotated immediately** — every overnight injection now risks executing.
+
+### Account
+- Equity: $100,288.26 | Cash: $77,353.49 (77.1%) | BP: $330,137.66 (4x) | Daytrade count: 0 | PDT: false
+- Long market value: $22,934.77 — entirely the 9 UNAUTHORIZED positions (pending liquidation at open). No authorized exposure.
+- ($100k working baseline, known ~10x mismatch vs $10k nominal.)
+
+### Market Context
+- S&P futures: ES ~7,472–7,488 (**+0.5% to +0.8%** premarket); NASDAQ-100 futures **+1.15%**; Dow +0.46%. Risk-ON, AI-momentum bid.
+- VIX: ~18 (down ~3-4%) — calm, no stress signal.
+- Oil: WTI ~$72–73 region (3.5-mo low zone), energy thesis stays dead.
+- Catalysts: Q1 2026 GDP (final) 8:30am ET; Samsara Investor Day; BlackBerry earnings. No CPI/PCE/FOMC today.
+- Macro on deck: **May PCE deflator Fri 6/26 8:30am ET** — week's key print. June CPI/jobs not until 7/14.
+- Sectors: Tech/AI leading again after Tue's pullback; energy laggard.
+
+### Trade Ideas
+1. **NO new entries — trading HALTED.** Account security is unresolved (4th-day persistent compromise, rogue fills now occurring). Will not deploy authorized capital atop a compromised key. This overrides any tape signal.
+2. (On a CLEAN/rotated key only) Risk-on AI tape would favor a single semis/AI leader, ~20% size, 10% trailing GTC at entry, stop -8% / target +16%. Not actionable today.
+3. Energy OFF (WTI ~$72). 
+
+### Risk Factors
+- **Persistent API-key compromise is the dominant risk** — now executing, not just queuing. Until rotated, every session opens with unauthorized exposure to cancel/flatten.
+- Operational: if liquidation sells slip or the attacker re-injects intraday, exposure could persist; market-open run must re-verify the flatten.
+- PCE Fri 6/26 is the next macro catalyst; tape otherwise calm/risk-on.
+
+### Decision
+**HOLD / TRADING HALTED — security first.** Cancelled the 4th batch of 9 rogue buys; preserved the 9 sell-to-close orders that will flatten yesterday's unauthorized fills at the open. NO authorized trading resumes until the user rotates ALPACA_API_KEY/SECRET and confirms the account is clean. 0/6 authorized positions, 0/3 weekly trades, daytrade_count 0. Next (market-open run): confirm the 9 sells filled and the book is flat, and re-cancel any fresh injection.
