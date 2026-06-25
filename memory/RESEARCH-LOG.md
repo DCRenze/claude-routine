@@ -454,3 +454,9 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - **Final state: account FULLY FLAT — 0 positions, 0 open orders, long MV $0.** Equity $100,219.35, cash $100,219.35 (100%), daytrade_count 0, PDT false. (Equity > yesterday's $99,463.73 because the rogue lots drifted up before liquidation — incidental, not strategy-earned.)
 - **No authorized trades placed.** Trading stays halted. 0/6 authorized positions, 0/3 weekly trades.
 - **User action STILL required and now CRITICAL — Day 4 of an active, automated compromise with executions now occurring.** Cancel-each-morning is no longer sufficient (fills got through 6/24). ROTATE ALPACA_API_KEY/SECRET immediately and audit account activity. No authorized trading resumes until the key is confirmed clean. Next: midday run re-verifies flat and re-cancels any new injection.
+
+### Midday Update (Day 12, Thursday 6/25) — BOOK STILL FLAT, NO NEW INJECTION ✅
+- Midday scan: positions [] , open orders [] — account remains FULLY FLAT since the market-open flatten. Equity $100,219.35, cash $100,219.35 (100%), daytrade_count 0, PDT false.
+- No fresh rogue order injection between the open and midday — the flatten held, nothing slipped through intraday.
+- No action taken: nothing to cut (0 positions), no stops to tighten, no thesis to recheck. Trading stays HALTED.
+- ROOT CAUSE STILL UNFIXED: ALPACA_API_KEY/SECRET compromise (Day 4) — user must rotate the key + audit. No authorized trading resumes until confirmed clean. Already alerted at pre-market and market-open today; no new development to re-alert at midday.
