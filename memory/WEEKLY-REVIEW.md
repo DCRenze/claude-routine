@@ -138,3 +138,56 @@ Template for each entry:
 
 ### Overall Grade: D
 - Risk-managed and rule-clean, but the core mission is to beat the S&P and we lagged it by 1.41% while sitting in cash through an up week. A disciplined loss is still a loss; chronic non-deployment is now the defining problem, not a one-off. Must actually deploy next week.
+
+## Week ending 2026-06-26
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio | $99,198.93 (Mon 6/22 AM ≈ Fri 6/19 close) |
+| Ending portfolio | $100,219.32 |
+| Week return | +$1,020.39 (+1.03%) |
+| S&P 500 week | +0.9% (holiday-shortened) |
+| Bot vs S&P | +0.13% — NOMINAL ONLY; luck, not edge (see note) |
+| Trades | 0 authorized (W:0 / L:0 / open:0). 9 unauthorized positions flattened (containment, not strategy) |
+| Win rate | N/A (no authorized closed trades) |
+| Best trade | N/A (no authorized trades) |
+| Worst trade | N/A (no authorized trades) |
+| Profit factor | N/A (no authorized trades) |
+
+> NOTE on the +1.03% week: ZERO authorized strategy trades occurred. The entire gain is an accounting artifact of liquidating the attacker's 9 unauthorized positions (filled 6/24) into a green tape at the 6/25 open (+$755.62 realized). The bot earned none of this; it could as easily have been a loss. Real strategy P&L this week = $0. The "beat" vs S&P is noise.
+
+### Closed Trades
+| Ticker | Entry | Exit | P&L | Notes |
+| — | — | — | — | No AUTHORIZED trades closed this week |
+| AAPL/AMD/AVGO/INTC/MRVL/MSFT/MU/SNDK/TSLA | various (6/24) | 6/25 open | +$755.62 (aggregate) | UNAUTHORIZED — attacker-opened, flattened as containment. Not strategy P&L. |
+
+### Open Positions at Week End
+| Ticker | Entry | Close | Unrealized | Stop |
+| — | — | — | — | None — 100% cash, fully flat (0 positions, 0 open orders) |
+
+### What Worked
+- Incident response was the week's only real work, and it was executed well: caught and cancelled 4 overnight rogue buy batches before fill; on 6/24 when 9 rogue lots DID fill naked, flattened them at the next open and drove long MV to $0 despite the paper engine throttling the sells.
+- Never knowingly carried unauthorized exposure past a session under my control; honored the no-naked-risk rule throughout. By Friday close the book was flat for the 2nd straight day with the 5th rogue batch (10 orders) cancelled pre-open before any fill.
+- Zero authorized rule violations: 0/3 weekly trades, 0/6 positions, daytrade_count 0, PDT false all week.
+- Correctly refused to deploy authorized capital on top of a compromised key — security override was the right call.
+
+### What Didn't Work
+- THE STRATEGY DID NOT TRADE — third consecutive week with no authorized deployment. Two weeks it was an over-restrictive screen; this week a (justified) security halt. Either way the mission engine has been idle for ~3 weeks.
+- The security incident is UNRESOLVED on Day 5. The bot has alerted the user to rotate ALPACA_API_KEY/SECRET every session since 6/22; the key has NOT been rotated. Containment depends entirely on the pre-market run catching each overnight batch — one missed run = naked fills again (proven 6/24). This is the dominant, escalating risk.
+- The headline +1.03% is luck from an attacker's lucky liquidation, not edge. Presenting it as a "win" would be self-deception; flagged explicitly so it doesn't pollute the phase record.
+- Phase P&L (+$219.32 / +0.22% vs $100k) is likewise an artifact of the 6/25 green flatten, not strategy performance. The strategy's own realized record remains -$801.07 (the XLE loss), 0-for-1 closed.
+
+### Key Lessons
+- A persistent credential compromise is an operational emergency that the bot alone cannot fix — it can only contain. When the only mitigation is a user action (key rotation) and the user hasn't acted in 5 days, daily in-band alerts are not landing. Escalation must be louder and clearer, not just repeated.
+- Cancel-each-morning containment is fragile by design: it is a race against the open and has already failed once (6/24 fills). It is NOT a substitute for rotating the key, and the review must say so plainly rather than reporting "contained" as if resolved.
+- Three weeks of a near-flat book means the challenge clock is running with the strategy on the sidelines. The opportunity cost is now structural, but it cannot be addressed until the account is secure — security strictly precedes any deployment-floor discipline.
+
+### Adjustments for Next Week
+- NO authorized trading resumes until the user rotates ALPACA_API_KEY/SECRET and confirms the account is clean. This is non-negotiable and overrides any deployment-floor or tape signal.
+- Every session next week: pre-market run MUST cancel any fresh rogue injection before the open and verify the book is flat; market-open/midday/EOD re-verify. Treat a missed pre-market run as the top operational risk.
+- The moment the key is confirmed rotated/clean: resume the normal screen and begin redeploying toward 75-85% on a confirmed, single-name momentum leg (Industrials/Materials favored on the 2026 rotation; energy stays OFF with WTI <$70; treat the Micron/AI-semis pop as a counter-trend bounce against hot PCE 4.1% + ~80% Sep-hike odds + VIX 21).
+- No strategy hard-rule change this week. The framework is not the problem — an unresolved compromise is. Re-evaluate the screen/deployment rules only after security is restored and the strategy has a clean week to actually trade.
+
+### Overall Grade: D
+- Containment was handled competently, but the core mission — trade to beat the S&P — did not happen for a third straight week, and a critical security incident the bot has flagged for 5 days remains unfixed because it requires a user action that hasn't occurred. The +1.03% is luck, not edge. A well-run holding pattern on a compromised account is still a non-performing week; the only path off this grade is the user rotating the key so the strategy can resume.
