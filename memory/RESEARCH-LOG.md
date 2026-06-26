@@ -460,3 +460,38 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - No fresh rogue order injection between the open and midday — the flatten held, nothing slipped through intraday.
 - No action taken: nothing to cut (0 positions), no stops to tighten, no thesis to recheck. Trading stays HALTED.
 - ROOT CAUSE STILL UNFIXED: ALPACA_API_KEY/SECRET compromise (Day 4) — user must rotate the key + audit. No authorized trading resumes until confirmed clean. Already alerted at pre-market and market-open today; no new development to re-alert at midday.
+
+## 2026-06-26 — Pre-market Research (Day 13, Friday)
+
+### 🚨 SECURITY INCIDENT — DAY 5 OF INJECTION; 5TH ROGUE BATCH CANCELLED (top priority)
+- Background: nightly automated rogue buy-order injection since 6/22. On 6/24 it ESCALATED — 9 unauthorized positions FILLED intraday, flattened at the 6/25 open. Containment has held since.
+- **This morning's state:** account opened FLAT (0 positions) but a **NEW 5th batch of 10 unauthorized BUY limit orders** was injected overnight: ROKU 38@131.09, NVDA 26@190.18, AAPL 18@268.91, CDNS 14@357.03, MPWR 3@1358.02, FSLR 21@237.06, RKLB 68@73.34, ROST 23@209.86, INTC 40@124.90, GS 4@1040.01. Same signature `A-<SYM>-20260625-buy`, created 2026-06-25T20:46Z, submitted 08:00Z, DAY tif expiring 20:00Z — timed for the open. ~$80k notional if filled.
+- **ACTION TAKEN:** cancelled all 10 rogue buys individually by order ID. Verified open book = empty, positions = empty. Account FULLY FLAT.
+- This is a CONFIRMED, PERSISTENT, AUTOMATED compromise on its 5th consecutive day. **ALPACA_API_KEY/SECRET MUST be rotated immediately** — every overnight injection risks executing (proven 6/24).
+
+### Account
+- Equity: $100,219.32 | Cash: $100,219.32 (100%) | BP: $353,090.02 (4x) | Daytrade count: 0 | PDT: false
+- Long market value: $0. 0 positions, 0 open orders. No authorized exposure.
+- ($100k working baseline, known ~10x mismatch vs $10k nominal.)
+
+### Market Context
+- WTI ~$69.21 (-3.8%) / Brent ~$72.86 (-2.2%) — oil broke **below $70**, 3.5-mo lows. Energy thesis stays dead.
+- S&P 500 futures: ES ~7,448 (**+0.27%**) — mildly risk-on into the open.
+- VIX: **~21 (+12%)** — jumped on the hot PCE print; first real stress uptick in weeks.
+- **Catalysts:** Micron (MU) blowout earnings (EPS $25.11 vs $20.83, rev $41.46B) reignited memory/AI-semis; Nasdaq bid +2%. AI build-out remains dominant theme.
+- **Macro — KEY:** May PCE released 6/25 came in HOT at **4.1% YoY** (highest since Apr 2023), core **3.4%**, spending +0.7%. Markets now price **~80% odds of a Fed rate HIKE at the Sep 15-16 meeting**. No major release today (6/26); next PCE 7/30.
+- Earnings before open today: DRI, SNX, AYI, CMC, WGO, NNOX (none in scope).
+- **Sector momentum YTD:** Energy +23%, Materials +17%, Staples +16%, Industrials +14% lead; **Tech -3.3%**, Financials -6.9%, Discretionary -3.8% LAG. Clear 2026 rotation OUT of tech INTO hard-asset/defensive — though today's intraday is a tech/semis counter-bounce on Micron.
+
+### Trade Ideas
+1. **NO new entries — trading HALTED.** Account security unresolved (Day 5 persistent compromise, fills occurred 6/24). Will not deploy authorized capital atop a compromised key. Overrides any tape signal.
+2. (CLEAN/rotated key only) The durable 2026 trend is rotation into Energy/Materials/Staples/Industrials and OUT of tech — but oil rolling over (<$70) undercuts the energy leg. Cleanest momentum leg would be Industrials or Materials (AI-infra capex beneficiaries), single name ~20% size, 10% trailing GTC at entry, stop -7%, target +15%. Not actionable today.
+3. Caution flag: hot PCE + ~80% Sep-hike odds + VIX 21 argues against chasing the Micron/AI semis pop — that's a counter-trend bounce against a tightening backdrop.
+
+### Risk Factors
+- **Persistent API-key compromise is the dominant risk** — proven to execute, not just queue. Until rotated, every session opens with rogue orders to cancel.
+- Macro regime shift: PCE 4.1% revives Fed-hike risk; VIX rising. Risk-on tape is fragile.
+- Oil <$70 kills the energy-momentum leg that led YTD; sector leadership in flux.
+
+### Decision
+**HOLD / TRADING HALTED — security first.** Cancelled the 5th batch of 10 rogue buys; account FULLY FLAT (0 positions, 0 orders, 100% cash). NO authorized trading resumes until the user rotates ALPACA_API_KEY/SECRET and confirms the account is clean. 0/6 authorized positions, 0/3 weekly trades, daytrade_count 0. Next (market-open run): re-verify flat and re-cancel any fresh injection.
