@@ -495,3 +495,9 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 
 ### Decision
 **HOLD / TRADING HALTED — security first.** Cancelled the 5th batch of 10 rogue buys; account FULLY FLAT (0 positions, 0 orders, 100% cash). NO authorized trading resumes until the user rotates ALPACA_API_KEY/SECRET and confirms the account is clean. 0/6 authorized positions, 0/3 weekly trades, daytrade_count 0. Next (market-open run): re-verify flat and re-cancel any fresh injection.
+
+### Market-Open Update (post-open) — CONTAINMENT HELD THROUGH THE OPEN ✅ (Day 5)
+- Re-checked at 13:32Z (just past the 13:30Z open): account FULLY FLAT — equity $100,219.32, cash 100%, **0 positions, 0 open orders**, long MV $0, daytrade_count 0, PDT false.
+- The 5th batch of 10 rogue DAY buys (cancelled pre-market 11:04Z) stayed cancelled through the open — all 10 show status canceled, 0 filled. **No fresh injection** after the pre-market cancel (no orders created post-08:00Z today). All fills in the order history are dated 6/24/6/25 (prior rogue fills + sell-to-close) — **zero fills today**. The highest-risk window (the open, where rogue DAY orders fill — proven 6/24) passed with no execution.
+- **No authorized trades placed** (trading halted per incident). Per plan, no new longs.
+- **User action STILL CRITICAL — Day 5 of an active, automated nightly compromise.** Cancel-each-morning is holding but is not a fix (fills got through 6/24). ROTATE ALPACA_API_KEY/SECRET immediately and audit account activity. No authorized trading resumes until the key is confirmed clean. Next: midday run re-verifies flat and re-cancels any new injection.
