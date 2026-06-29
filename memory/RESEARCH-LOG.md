@@ -507,3 +507,38 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - **No new rogue injection** since the market-open check — order book empty, no orders created post-open today, zero fills today. The 5th rogue batch (cancelled pre-market) remains canceled.
 - No losers to cut (no positions); no stops to tighten (no positions). No action required this scan.
 - **Standing user action UNCHANGED & CRITICAL:** rotate ALPACA_API_KEY/SECRET and audit account. Cancel-each-session containment is holding but is a stopgap — fills got through 6/24. No authorized trading resumes until the key is confirmed clean. Next: EOD run re-verifies flat.
+
+## 2026-06-29 — Pre-market Research (Day 14, Monday)
+
+### 🚨 SECURITY INCIDENT — DAY 6 OF INJECTION; 6TH ROGUE BATCH CANCELLED (top priority)
+- Background: nightly automated rogue buy-order injection since 6/22. On 6/24 it ESCALATED — 9 unauthorized positions FILLED intraday, flattened at the 6/25 open. Containment has held every session since via pre-market cancel.
+- **This morning's state:** account opened FLAT (0 positions) but a **NEW 6th batch of 10 unauthorized BUY limit orders** was injected: EQIX 4@1071.65, NVDA 26@187.18, MPWR 4@1230.80, FSLR 21@227.77, COP 48@103.62, MTSI 14@351.16, AKAM 46@108.27, GS 5@993.16, FANG 28@175.70, ROST 24@208.08. Signature `A-<SYM>-20260626-buy`, source=access_key, created 2026-06-26T20:46Z, submitted 2026-06-29T08:01Z, DAY tif expiring 20:00Z — timed for the open. ~$78k notional if filled. (Note: ticker mix rotated toward energy/REIT/staples — EQIX, COP, FANG, ROST — vs prior batches.)
+- **ACTION TAKEN:** cancelled all 10 rogue buys individually by order ID. Verified open book = empty, positions = empty. Account FULLY FLAT.
+- CONFIRMED, PERSISTENT, AUTOMATED compromise on its 6th consecutive day. **ALPACA_API_KEY/SECRET MUST be rotated immediately** — every overnight injection risks executing (proven 6/24).
+
+### Account
+- Equity: $100,219.32 | Cash: $100,219.32 (100%) | BP: $352,267.79 (4x) | Daytrade count: 0 | PDT: false
+- Long market value: $0. 0 positions, 0 open orders. No authorized exposure.
+- ($100k working baseline, known ~10x mismatch vs $10k nominal.)
+
+### Market Context
+- WTI ~$69.85 (+1% intraday but Brent **-10% on the week**) / Brent ~$72.5–73.3 — oil rolling over as **Strait of Hormuz disruption fears ease**. Energy thesis stays dead near-term.
+- S&P 500 futures: ES ~7,451 (**+0.67%**); Nasdaq-100 +1.0% — risk-on after **US–Iran agreed to stop tit-for-tat attacks** over the weekend. Prior week was ugly (S&P -2%, Nasdaq -4.6% on the conflict).
+- VIX: **~18.4** (down from ~21 last Fri) — stress fading as geopolitics de-escalate.
+- **Catalysts:** US–Iran de-escalation (relief bid); HPE +19.5% on earnings beat lifting chips; Marvell +32% (Huang trillion-dollar comment); Nasdaq trying to end a losing streak. Offsetting: lingering **Sep Fed-hike fear** (hot 4.1% PCE last week, Warsh inflation focus).
+- **Macro:** NO pre-market release today. FOMC Minutes 6:00pm ET. Next CPI 7/14, PPI 7/15. ~80% odds of a Sep rate HIKE still priced.
+- Earnings before open: FDS, GIS, MSM, UNF (none in scope).
+- **Sector momentum YTD:** Energy +23.3%, Materials +17.4%, Staples +15.6%, Industrials +14.1% lead; **Tech -3.3%**, Discretionary -3.8%, Financials -6.9% LAG. 2026 rotation OUT of tech INTO hard-asset/defensive intact; today's tape is a tech/semis relief bounce against that trend.
+
+### Trade Ideas
+1. **NO new entries — trading HALTED.** Account security unresolved (Day 6 persistent compromise, fills occurred 6/24). Will not deploy authorized capital atop a compromised key. Overrides any tape signal.
+2. (CLEAN/rotated key only) Durable 2026 trend = rotation into Materials/Staples/Industrials, OUT of tech; energy leg undercut by oil <$70. Cleanest momentum would be Materials or Industrials, ~20% single-name size, 10% trailing GTC at entry, stop -7%, target +15%. Not actionable today.
+3. Caution: today's US–Iran relief bounce + Marvell/HPE semis pop is counter-trend against a tightening backdrop (Sep-hike risk). Don't chase the gap.
+
+### Risk Factors
+- **Persistent API-key compromise is the dominant risk** — proven to execute, not just queue. Until rotated, every session opens with rogue orders to cancel; one missed pre-market run = naked fills (as 6/24).
+- Geopolitics two-sided: relief now, but Hormuz/ceasefire fragile — a re-escalation reverses the gap and spikes oil/VIX.
+- Macro: Sep-hike odds ~80%; relief rally is fighting a tightening Fed.
+
+### Decision
+**HOLD / TRADING HALTED — security first.** Cancelled the 6th batch of 10 rogue buys; account FULLY FLAT (0 positions, 0 orders, 100% cash). NO authorized trading resumes until the user rotates ALPACA_API_KEY/SECRET and confirms the account is clean. 0/6 authorized positions, 0/3 weekly trades, daytrade_count 0. Next (market-open run): re-verify flat and re-cancel any fresh injection.
