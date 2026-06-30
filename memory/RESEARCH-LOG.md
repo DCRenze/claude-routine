@@ -596,3 +596,8 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - Order history today = exactly the 7th batch of 10 rogue DAY buys (ROST/DELL/MTSI/NVDA/HPE/MDLZ/HPQ/GM/AVGO/MPWR), all status `canceled` (11:04Z), **0 filled**. **No fresh injection** after the pre-market cancel-all — no new orders created post-08:01Z today, zero fills. The highest-risk window (the open, where rogue DAY orders fill — proven 6/24) passed with no execution.
 - **No authorized trades placed** (trading halted per incident). Per plan, no new longs.
 - **User action STILL CRITICAL — Day 7 of an active, automated nightly compromise.** Cancel-each-morning is holding but is not a fix (fills got through 6/24). ROTATE ALPACA_API_KEY/SECRET immediately and audit account activity. No authorized trading resumes until the key is confirmed clean. Next: midday run re-verifies flat and re-cancels any new injection. (Pre-market already alerted on today's 7th batch + unrotated key; no new development to re-alert at the open.)
+
+### Midday Scan — CONTAINMENT STILL HOLDING ✅ (Day 7)
+- Re-verified at midday: account FULLY FLAT — **0 positions, 0 open orders**, 100% cash. No new rogue injection since the open; nothing to cancel.
+- Standard midday steps N/A (no positions): no losers to cut, no winners to tighten, no open theses to recheck. No authorized trades placed (trading halted per incident).
+- Status unchanged from the open — no new development. **ALPACA_API_KEY/SECRET still compromised (Day 7) and still unrotated; user action remains critical.** (Pre-market + market-open already alerted; no re-alert at midday.) Next: EOD/daily-summary run re-confirms flat.
