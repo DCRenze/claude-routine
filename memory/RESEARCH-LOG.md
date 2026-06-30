@@ -555,3 +555,38 @@ HOLD pre-decision. 100% cash, 0 positions, 0/3 weekly trades used. No initiation
 - STEP 3–5 n/a (no positions): no losers to cut, no stops to tighten, no thesis to recheck. Trading remains HALTED per the active security incident.
 - **No action taken this session; no new development since pre-market/open** — pre-market already alerted on today's batch and on the unresolved key compromise, so no re-alert.
 - **USER ACTION STILL CRITICAL:** rotate ALPACA_API_KEY/SECRET and audit the account. Cancel-each-session containment is holding but is not a fix (fills got through 6/24). Next: EOD run re-verifies flat.
+
+## 2026-06-30 — Pre-market Research (Day 15, Tuesday)
+
+### 🚨 SECURITY INCIDENT — DAY 7 OF INJECTION; 7TH ROGUE BATCH CANCELLED (top priority)
+- Background: nightly automated rogue buy-order injection since 6/22. Escalated 6/24 when 9 unauthorized positions FILLED intraday (flattened at the 6/25 open). Containment has held every session since via pre-market cancel.
+- **This morning's state:** account opened FLAT (0 positions) but a **NEW 7th batch of 10 unauthorized BUY limit orders** was LIVE and OPEN (status `new`, not just pending): ROST 24@203.68, DELL 12@391.00, MTSI 14@354.31, NVDA 26@189.68, HPE 118@42.15, MDLZ 84@59.03, HPQ 229@21.85, GM 66@75.50, AVGO 13@358.23, MPWR 4@1233.56. Signature `A-<SYM>-20260629-buy`, source=access_key, created 2026-06-29T20:46Z, submitted 2026-06-30T08:01Z, DAY tif expiring 20:00Z — timed for the open. ~$80k notional if filled. (Ticker mix rotated again toward AI-hardware/autos/staples — DELL, HPE, HPQ, NVDA, AVGO, MPWR, GM, MDLZ.)
+- **ACTION TAKEN:** cancelled all 10 rogue buys via cancel-all (every one returned HTTP 200, filled_qty=0). Re-verified open book = empty, positions = empty. Account FULLY FLAT.
+- CONFIRMED, PERSISTENT, AUTOMATED compromise on its 7th consecutive day. **ALPACA_API_KEY/SECRET MUST be rotated immediately** — every overnight injection risks executing (proven 6/24).
+
+### Account
+- Equity: $100,219.32 | Cash: $100,219.32 (100%) | BP: $351,894.74 (4x) | Daytrade count: 0 | PDT: false
+- Long market value: $0. 0 positions, 0 open orders. No authorized exposure.
+- ($100k working baseline, known ~10x mismatch vs $10k nominal.)
+
+### Market Context
+- WTI ~$70.31 / Brent ~$72.56 — oil stabilizing in the low-$70s; Strait of Hormuz tension easing keeps the near-term energy thesis muted.
+- S&P 500 futures: ES ~7,497.50 (**-0.04%**, flat) — consolidating near record highs after a strong 2-month run (Nasdaq reportedly +25% over the stretch; JPM lifted 2026 SPX target to 7,800).
+- VIX: **~17.65** (down from 18.41 on 6/26) — low end of 52-wk range; complacent tape.
+- **Catalysts:** AI-infrastructure demand still the dominant driver (Dell +32.8%, Snowflake +36%, HPE +20% on recent earnings); US–Iran de-escalation "blue sky"; SpaceX IPO anticipation. (Note: catalyst feed flags AI/tech leadership, which conflicts with the YTD sector read below — treat the record-high narrative with caution.)
+- **Macro:** NO release today. June NFP **7/2** (consensus 110K). June CPI/PPI **~7/14–15**. FOMC was 6/17, held **3.50–3.75%**. Traders digesting the hold.
+- Earnings before open: DRI, SNX, AYI, CMC, WGO, NNOX (none in scope). NKE & STZ after close.
+- **Sector momentum YTD:** Energy +23.3%, Materials +17.4%, Staples +15.6%, Industrials +14.1% lead; **Tech -3.3%**, Discretionary -3.8%, Financials -6.9% LAG. Hard-asset/defensive rotation OUT of tech remains the structural 2026 trend; SPX itself only ~+1.2% YTD.
+
+### Trade Ideas
+1. **NO new entries — trading HALTED.** Account security unresolved (Day 7 persistent compromise, fills occurred 6/24). Will not deploy authorized capital atop a compromised key. Overrides any tape signal.
+2. (CLEAN/rotated key only) Durable 2026 trend = rotation into Materials/Staples/Industrials, OUT of tech. Cleanest momentum = Materials or Industrials, ~20% single-name size, 10% trailing GTC at entry, stop -7%, target +15%. Not actionable today.
+3. Caution: VIX ~17.6 + record highs = complacent, two-sided into the 7/2 jobs print. Don't chase.
+
+### Risk Factors
+- **Persistent API-key compromise is the dominant risk** — proven to execute, not just queue. Until rotated, every session opens with rogue orders to cancel; one missed pre-market run = naked fills (as 6/24).
+- 7/2 June NFP is the next macro catalyst; low VIX leaves little cushion for a miss.
+- Geopolitics two-sided: Iran relief priced, but Hormuz/ceasefire fragile.
+
+### Decision
+**HOLD / TRADING HALTED — security first.** Cancelled the 7th batch of 10 rogue buys; account FULLY FLAT (0 positions, 0 orders, 100% cash $100,219.32). NO authorized trading resumes until the user rotates ALPACA_API_KEY/SECRET and confirms the account is clean. 0/6 authorized positions, 0/3 weekly trades, daytrade_count 0. Next (market-open run): re-verify flat and re-cancel any fresh injection.
